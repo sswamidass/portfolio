@@ -1,0 +1,11 @@
+# Claude Code tooling
+.claude/
+
+# BMad framework
+_bmad/
+
+# Internal planning docs
+docs/
+
+# Node modules
+node_modules/
