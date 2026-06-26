@@ -1,0 +1,152 @@
+.about-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left column */
+.about-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 28px;
+}
+
+.about-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  margin-bottom: 10px;
+}
+
+.about-greeting {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.about-bio {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+/* Experience */
+.about-experience {
+  margin-top: 40px;
+}
+
+.about-experience .about-eyebrow {
+  margin-bottom: 16px;
+}
+
+.about-exp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.about-exp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.9rem;
+}
+
+.about-exp-item strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.about-exp-item span {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.about-resume-link {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.about-resume-link:hover {
+  color: var(--color-muted);
+}
+
+/* Right column */
+.about-right {
+  padding-top: 8px;
+}
+
+.about-values {
+  margin-bottom: 40px;
+}
+
+.about-values .about-eyebrow {
+  margin-bottom: 20px;
+}
+
+.about-values-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.about-value-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.about-value-icon {
+  font-size: 1.25rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.about-value-heading {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.about-value-body {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+/* Secondary photo */
+.about-photo-secondary-wrap {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.about-photo-secondary {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-page {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

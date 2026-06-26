@@ -1,19 +1,28 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import R360CaseStudy from './pages/R360CaseStudy'
-import K12CaseStudy from './pages/K12CaseStudy'
-import TireRackCaseStudy from './pages/TireRackCaseStudy'
+import WorkPage from './pages/WorkPage'
+import About from './pages/About'
+import GehcCaseStudy from './pages/GehcCaseStudy'
+import GehcGuard from './components/GehcGuard'
 import HomegroundCaseStudy from './pages/HomegroundCaseStudy'
+import R360CaseStudy from './pages/R360CaseStudy'
+import TireRackCaseStudy from './pages/TireRackCaseStudy'
+import K12CaseStudy from './pages/K12CaseStudy'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/r360" element={<R360CaseStudy />} />
-        <Route path="/k12" element={<K12CaseStudy />} />
-        <Route path="/tirerack" element={<TireRackCaseStudy />} />
-        <Route path="/homeground" element={<HomegroundCaseStudy />} />
+        <Route path="/work" element={<WorkPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work/gehc" element={
+          <GehcGuard><GehcCaseStudy /></GehcGuard>
+        } />
+        <Route path="/work/homeground" element={<HomegroundCaseStudy />} />
+        <Route path="/work/remote360" element={<R360CaseStudy />} />
+        <Route path="/work/tirerack" element={<TireRackCaseStudy />} />
+        <Route path="/work/k12" element={<K12CaseStudy />} />
       </Routes>
     </BrowserRouter>
   )

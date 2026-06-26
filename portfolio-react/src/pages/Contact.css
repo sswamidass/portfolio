@@ -1,0 +1,15 @@
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-links a {
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}

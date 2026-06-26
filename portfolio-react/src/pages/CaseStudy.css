@@ -1,0 +1,47 @@
+.cs-eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+}
+
+.cs-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.cs-role {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-bottom: 64px;
+}
+
+.cs-section {
+  margin-bottom: 56px;
+  max-width: 640px;
+}
+
+.cs-section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cs-section p,
+.cs-section ul,
+.cs-section ol {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+.cs-section img {
+  width: 100%;
+  margin-top: 24px;
+}
