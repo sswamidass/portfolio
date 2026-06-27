@@ -1,6 +1,6 @@
 .csf {
-  background: var(--cs-paper, #E8E1D4);
-  border-top: 1px solid var(--cs-line, rgba(30,40,30,0.08));
+  background: var(--cs-paper, #F6F6F4);
+  border-top: 1px solid var(--cs-line, rgba(0,0,0,0.09));
   padding: 80px 0 48px;
   font-family: var(--cs-font, 'Hanken Grotesk', sans-serif);
 }
@@ -23,8 +23,8 @@
   font-size: clamp(56px, 10vw, 96px);
   font-weight: 900;
   line-height: 1;
-  color: var(--cs-accent, #1E4A38);
-  letter-spacing: -0.02em;
+  color: var(--cs-ink, #111110);
+  letter-spacing: -0.04em;
   flex-shrink: 0;
 }
 
@@ -35,11 +35,11 @@
 }
 
 .csf-col-label {
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cs-ink-muted, #6F6F62);
+  letter-spacing: 0.12em;
+  color: var(--cs-ink-muted, #787874);
   margin-bottom: 16px;
 }
 
@@ -52,13 +52,13 @@
 
 .csf-col-links a {
   font-size: 0.9rem;
-  color: var(--cs-ink, #3A3B31);
+  color: var(--cs-ink, #111110);
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .csf-col-links a:hover {
-  color: var(--cs-accent, #1E4A38);
+  color: var(--cs-ink-muted, #787874);
   text-decoration: underline;
 }
 
@@ -67,30 +67,30 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: var(--cs-ink-muted, #6F6F62);
+  color: var(--cs-ink-muted, #787874);
   padding-top: 24px;
-  border-top: 1px solid var(--cs-line, rgba(30,40,30,0.08));
+  border-top: 1px solid var(--cs-line, rgba(0,0,0,0.09));
 }
 
 .csf-toggle {
   background: none;
-  border: 1px solid var(--cs-line, rgba(30,40,30,0.12));
+  border: 1px solid var(--cs-line, rgba(0,0,0,0.12));
   border-radius: 999px;
   padding: 7px 10px;
   cursor: pointer;
-  color: var(--cs-ink-muted, #6F6F62);
+  color: var(--cs-ink-muted, #787874);
   display: flex;
   align-items: center;
   transition: color 0.15s, border-color 0.15s;
 }
 
 .csf-toggle:hover {
-  color: var(--cs-accent, #1E4A38);
-  border-color: var(--cs-accent, #1E4A38);
+  color: var(--cs-ink, #111110);
+  border-color: var(--cs-ink, #111110);
 }
 
 .csf-toggle:focus-visible {
-  outline: 2px solid var(--cs-accent, #1E4A38);
+  outline: 2px solid var(--cs-ink, #111110);
   outline-offset: 2px;
 }
 
