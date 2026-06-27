@@ -19,47 +19,58 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections })
     <div className="cs-page">
       <CaseStudyNav />
 
-      {/* Hero */}
-      <div className="cs-hero" style={{ backgroundColor: item.bgColor }}>
-        {item.heroImage && (
-          <div
-            className="cs-hero-bg"
-            style={{
-              backgroundImage: `url(${item.heroImage})`,
-              backgroundPosition: item.bgPosition || 'center center',
-            }}
-          />
-        )}
-        <div className="cs-hero-overlay" />
-        <div className="cs-hero-content">
-          {item.logo
-            ? <img src={item.logo} alt={item.company} className="cs-hero-logo"
-                style={item.logoInvert === false ? { filter: 'none' } : {}} />
-            : <h1 className="cs-hero-company">{item.company}</h1>
-          }
-          <div className="cs-hero-meta">
-            {[['Role', item.role], ['Duration', item.duration], ['Tools', item.tools], ['Team', item.team]]
-              .filter(([, v]) => v)
-              .map(([label, val]) => (
-                <div key={label} className="cs-hero-meta-row">
-                  <span className="cs-meta-label">{label}</span>
-                  <span className="cs-meta-value">{val}</span>
-                </div>
-              ))}
+      {/* Page hero — title on sand, no photo */}
+      <div className="cs-col">
+        <div className="cs-page-hero">
+          {item.logo && (
+            <img
+              src={item.logo}
+              alt={item.company}
+              className="cs-page-logo"
+            />
+          )}
+          <h1 className="cs-page-title">
+            {item.caseStudyTitle || item.company}.
+          </h1>
+          <div className="cs-page-meta">
+            {item.role && (
+              <div className="cs-page-meta-item">
+                <span className="cs-page-meta-label">Role</span>
+                <span className="cs-page-meta-value">{item.role}</span>
+              </div>
+            )}
+            {item.duration && (
+              <div className="cs-page-meta-item">
+                <span className="cs-page-meta-label">Timeline</span>
+                <span className="cs-page-meta-value">{item.duration}</span>
+              </div>
+            )}
+            {item.tools && (
+              <div className="cs-page-meta-item">
+                <span className="cs-page-meta-label">Tools</span>
+                <span className="cs-page-meta-value">{item.tools}</span>
+              </div>
+            )}
+            {item.team && (
+              <div className="cs-page-meta-item">
+                <span className="cs-page-meta-label">Team</span>
+                <span className="cs-page-meta-value">{item.team}</span>
+              </div>
+            )}
           </div>
         </div>
-        <div className="cs-hero-scroll" aria-hidden="true">&#8595;</div>
       </div>
 
-      {/* Intro — statement block on bare sand */}
-      <div className="cs-col">
-        <div className="cs-statement cs-statement--intro">
-          <p className="cs-eyebrow">{item.caseStudyTitle || item.company}{item.caseStudySubtitle ? ` — ${item.caseStudySubtitle}` : ''}</p>
-          {intro.map((p, i) => (
-            <p key={i} className={i === 0 ? 'cs-lead' : 'cs-body-text'}>{p}</p>
-          ))}
+      {/* Intro text — statement block on bare sand */}
+      {intro && intro.length > 0 && (
+        <div className="cs-col">
+          <div className="cs-statement cs-statement--intro">
+            {intro.map((p, i) => (
+              <p key={i} className={i === 0 ? 'cs-lead' : 'cs-body-text'}>{p}</p>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Full-bleed intro photo */}
       {introPhoto && (
