@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 32px;
+  padding: var(--nav-height) 32px 80px;
 }
 
 .home-center {
@@ -24,29 +24,10 @@
   color: var(--color-muted);
   line-height: 1.75;
   max-width: 780px;
-  margin-bottom: 48px;
-}
-
-.home-nav {
-  display: flex;
-  gap: 28px;
-}
-
-.home-nav a {
-  font-size: 0.95rem;
-  color: var(--color-text);
-}
-
-.home-nav a:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
   .home {
-    padding: 60px 24px;
-  }
-
-  .home-nav {
-    gap: 20px;
+    padding: var(--nav-height) 24px 60px;
   }
 }

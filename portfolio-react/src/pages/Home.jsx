@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import Nav from '../components/Nav'
 import './Home.css'
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
 
   return (
     <div className="home">
+      <Nav />
       <div className="home-center">
         <h1 className="home-headline">
           Sanjay Swamidass is a Senior Product Designer based in Chicago, Illinois.
@@ -16,10 +17,6 @@ export default function Home() {
         <p className="home-intro">
           Currently leading interaction design at GE HealthCare. Driven by curiosity, empathy, and process — he creates experiences that connect people with complex systems. Co-founder of Homeground, a Great Lakes coffee and kids' book subscription box, with his partner Sara.
         </p>
-        <nav className="home-nav">
-          <Link to="/work">Work</Link>
-          <Link to="/about">About</Link>
-        </nav>
       </div>
     </div>
   )
