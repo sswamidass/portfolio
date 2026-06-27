@@ -1,0 +1,108 @@
+/* ── Work Listing Page — design tokens ── */
+.wl-page {
+  /* Warm palette — cascades to CaseStudyNav + CaseStudyFooter via --cs-* vars */
+  --cs-paper:       #E8E1D4;
+  --cs-surface:     #FBF8F2;
+  --cs-ink:         #3A3B31;
+  --cs-ink-muted:   #6F6F62;
+  --cs-accent:      #1E4A38;
+  --cs-accent-soft: #2E6B4F;
+  --cs-line:        rgba(30, 40, 30, 0.08);
+  --cs-font:        'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Page */
+  background: var(--cs-paper);
+  color: var(--cs-ink);
+  font-family: var(--cs-font);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── Column ── */
+.wl-col {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── Main ── */
+.wl-main {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+/* ── Section ── */
+.wl-section {
+  padding-top: 80px;
+}
+
+.wl-section:first-child {
+  padding-top: 48px;
+}
+
+/* ── Section heading ── */
+.wl-section-head {
+  margin-bottom: 48px;
+}
+
+.wl-section-heading {
+  font-family: var(--cs-font);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 900;
+  color: var(--cs-accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 16px;
+}
+
+.wl-section-sub {
+  font-size: 1rem;
+  color: var(--cs-ink-muted);
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+/* ── Cards ── */
+.wl-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ── In Progress placeholder ── */
+.wl-placeholder {
+  border: 1.5px dashed rgba(30, 40, 30, 0.2);
+  border-radius: 26px;
+  padding: 72px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wl-placeholder-inner {
+  text-align: center;
+}
+
+.wl-placeholder-label {
+  font-family: var(--cs-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--cs-ink-muted);
+}
+
+/* ── Responsive ── */
+@media (max-width: 780px) {
+  .wl-main { padding-top: 80px; padding-bottom: 96px; }
+  .wl-section { padding-top: 64px; }
+  .wl-section:first-child { padding-top: 32px; }
+  .wl-cards { gap: 32px; }
+  .wl-section-head { margin-bottom: 36px; }
+}
+
+@media (max-width: 480px) {
+  .wl-col { padding: 0 20px; }
+  .wl-cards { gap: 24px; }
+  .wl-placeholder { padding: 48px 24px; }
+}
