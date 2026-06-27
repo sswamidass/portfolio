@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import WorkPage from './pages/WorkPage'
+import WorkListingPage from './pages/WorkListingPage'
 import About from './pages/About'
 import GehcCaseStudy from './pages/GehcCaseStudy'
 import GehcGuard from './components/GehcGuard'
@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter basename="/portfolio-new">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/work" element={<WorkPage />} />
+        <Route path="/work" element={<WorkListingPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/work/gehc" element={
           <GehcGuard><GehcCaseStudy /></GehcGuard>

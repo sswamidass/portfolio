@@ -1,0 +1,125 @@
+/* ── ProjectCard — shared component ── */
+
+.pc {
+  display: flex;
+  flex-direction: column;
+  border-radius: 26px;
+  overflow: hidden;
+  text-decoration: none !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc { transition: none; }
+}
+
+.pc:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.14);
+}
+
+.pc:focus-visible {
+  outline: 3px solid #1E4A38;
+  outline-offset: 3px;
+  transform: translateY(-5px);
+}
+
+/* ── Variants ── */
+
+.pc--light {
+  background: #FBF8F2;
+}
+
+.pc--dark {
+  background: #161616;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+.pc--dark:hover {
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.36);
+}
+
+/* ── Header ── */
+
+.pc-header {
+  padding: 36px 40px 32px;
+  text-align: right;
+}
+
+.pc-eyebrow {
+  display: block;
+  font-family: 'Hanken Grotesk', -apple-system, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 14px;
+}
+
+.pc--light .pc-eyebrow { color: #6F6F62; }
+.pc--dark  .pc-eyebrow { color: rgba(255, 255, 255, 0.55); }
+
+.pc-title {
+  font-family: 'Hanken Grotesk', -apple-system, sans-serif;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+
+.pc--light .pc-title { color: #3A3B31; }
+.pc--dark  .pc-title { color: #FFFFFF; }
+
+.pc-summary {
+  font-family: 'Hanken Grotesk', -apple-system, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pc--light .pc-summary { color: #6F6F62; }
+.pc--dark  .pc-summary { color: rgba(255, 255, 255, 0.6); }
+
+/* ── Media ── */
+
+.pc-media {
+  flex: 1;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.pc-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-media img { transition: none; }
+}
+
+.pc:hover .pc-media img {
+  transform: scale(1.02);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 600px) {
+  .pc-header {
+    padding: 28px 28px 24px;
+    text-align: left;
+  }
+
+  .pc-title {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+}
