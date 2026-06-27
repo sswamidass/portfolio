@@ -1,0 +1,70 @@
+.cs-nav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+}
+
+.cs-nav-pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 999px;
+  padding: 4px;
+  border: 1px solid rgba(30, 40, 30, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.cs-nav-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  transition: left 0.24s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.24s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.12s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-nav-indicator {
+    transition: none;
+  }
+}
+
+.cs-nav-link {
+  position: relative;
+  z-index: 1;
+  padding: 8px 18px;
+  font-family: var(--cs-font, 'Hanken Grotesk', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cs-ink, #3A3B31);
+  border-radius: 999px;
+  text-decoration: none !important;
+  transition: color 0.15s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cs-nav-link:hover {
+  color: var(--cs-accent, #1E4A38);
+  text-decoration: none !important;
+}
+
+.cs-nav-link.active {
+  color: var(--cs-accent, #1E4A38);
+}
+
+@media (max-width: 480px) {
+  .cs-nav-link {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+}
