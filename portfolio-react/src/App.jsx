@@ -11,7 +11,7 @@ import K12CaseStudy from './pages/K12CaseStudy'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio-new">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<WorkPage />} />

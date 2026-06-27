@@ -9,6 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script>
+      // SPA redirect handler for GitHub Pages 404 workaround
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+        var search = window.location.search;
+        if (search.indexOf('?p=/') === 0) {
+          var decoded = search.slice(3).replace(/~and~/g, '&');
+          var query = decoded.indexOf('&q=') !== -1 ? '?' + decoded.split('&q=')[1] : '';
+          var path = decoded.split('&q=')[0];
+          history.replaceState(null, null, '/portfolio-new' + path + query + window.location.hash);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
