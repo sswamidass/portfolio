@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Layout from '../components/Layout'
+import { img } from '../utils/img'
 import './About.css'
 
 const experience = [
@@ -42,7 +43,7 @@ export default function About() {
     <Layout>
       <div className="about-page page-container page-content">
         <div className="about-left">
-          <img src="/images/about.jpg" alt="Sanjay Swamidass" className="about-photo" />
+          <img src={img('/images/about.jpg')} alt="Sanjay Swamidass" className="about-photo" />
 
           <p className="about-eyebrow">A little about me</p>
           <h1 className="about-greeting">Hi, I'm Sanjay!</h1>
@@ -87,7 +88,7 @@ export default function About() {
           </section>
 
           <div className="about-photo-secondary-wrap">
-            <img src="/images/about-winter.jpg" alt="" className="about-photo-secondary" />
+            <img src={img('/images/about-winter.jpg')} alt="" className="about-photo-secondary" />
           </div>
         </div>
       </div>

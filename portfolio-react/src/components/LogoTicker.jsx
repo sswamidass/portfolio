@@ -1,9 +1,11 @@
+import { img } from '../utils/img'
+
 const logos = [
-  { src: '/images/ge.png', alt: 'GE Healthcare', href: 'https://www.gehealthcare.com/' },
-  { src: '/images/mms.png', alt: 'MC Machinery / Mitsubishi EDM', href: 'https://www.mcmachinery.com/' },
-  { src: '/images/tirerack.png', alt: 'Tire Rack', href: 'https://www.tirerack.com/' },
-  { src: '/images/simpleupdates.png', alt: 'Simple Updates', href: 'https://www.simpleupdates.com/' },
-  { src: '/images/homeground-logo.png', alt: 'Homeground', href: '#', light: true },
+  { src: img('/images/ge.png'), alt: 'GE Healthcare', href: 'https://www.gehealthcare.com/' },
+  { src: img('/images/mms.png'), alt: 'MC Machinery / Mitsubishi EDM', href: 'https://www.mcmachinery.com/' },
+  { src: img('/images/tirerack.png'), alt: 'Tire Rack', href: 'https://www.tirerack.com/' },
+  { src: img('/images/simpleupdates.png'), alt: 'Simple Updates', href: 'https://www.simpleupdates.com/' },
+  { src: img('/images/homeground-logo.png'), alt: 'Homeground', href: '#', light: true },
   { text: 'Andrews University', href: 'https://www.andrews.edu/' },
 ]
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import AnimateBox from '../AnimateBox'
+import { img } from '../../utils/img'
 
 const projects = [
   {
@@ -9,7 +10,7 @@ const projects = [
       'Leading UX design across complex, high-stakes software products for the healthcare industry — from participatory research and card sorting through annotated prototypes, design systems, and stakeholder alignment.',
     stat: null,
     statLabel: null,
-    image: '/images/ge-work.jpg',
+    image: img('/images/ge-work.jpg'),
     imageAlt: 'GE Healthcare product design',
     imageRight: true,
     link: null,
@@ -22,7 +23,7 @@ const projects = [
       'Designed and built remote360®, a real-time production monitoring web application that replaced a legacy desktop Java tool — owning everything from user research and wireframing to visual design and front-end development.',
     stat: null,
     statLabel: null,
-    image: '/images/responsive_group.png',
+    image: img('/images/responsive_group.png'),
     imageAlt: 'remote360 responsive design',
     imageRight: false,
     link: '/r360',
@@ -35,8 +36,8 @@ const projects = [
       'Crafted a complete brand identity and design system for Homeground — a nature-inspired, literary artisanal brand built on Shopify — including custom color tokens, typography, botanical illustration language, and a living style guide.',
     stat: null,
     statLabel: null,
-    image: '/images/homeground-fall.jpg',
-    imageLogo: '/images/homeground-logo.png',
+    image: img('/images/homeground-fall.jpg'),
+    imageLogo: img('/images/homeground-logo.png'),
     imageAlt: 'Homeground brand — autumn landscape',
     imageRight: true,
     link: null,

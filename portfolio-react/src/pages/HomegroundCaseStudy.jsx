@@ -1,4 +1,5 @@
 import CaseStudyTemplate from '../components/CaseStudyTemplate'
+import { img } from '../utils/img'
 import { workItems } from '../data/work'
 
 const item = workItems.find(w => w.id === 'homeground')
@@ -48,7 +49,7 @@ const sections = [
       {
         heading: 'Building the world',
         body: 'The identity started with the name — Homeground — and the associations it carries: the ground beneath your feet, home as a place you return to, the grounds in a coffee cup. From that I built a visual language rooted in the natural world: a botanical illustration system, an earthy palette anchored in deep greens and warm neutrals, and typography that balanced warmth with literary credibility.',
-        image: '/images/homeground-founders.jpg',
+        image: img('/images/homeground-founders.jpg'),
       },
       {
         body: 'Every element was codified into a living style guide — color tokens, type scale, illustration usage rules, logo clearance, and voice guidelines — so the brand could grow without drifting.',
@@ -73,7 +74,7 @@ const sections = [
       {
         heading: 'Building an audience before the doors opened',
         body: 'Before the store launched, the priority was audience. I designed and built a pre-launch email capture page — a standalone experience that conveyed the full brand and collected sign-ups before anything was for sale. One scroll. Do the whole job.',
-        image: '/images/homeground-email-hero.png',
+        image: img('/images/homeground-email-hero.png'),
       },
       {
         body: 'Email infrastructure was built on Omnisend: welcome flows, subscriber confirmation, campaign templates, and full DNS authentication setup (SPF, DKIM, DMARC) to ensure deliverability from day one. Every campaign followed the same visual system as the storefront — consistent type, consistent color, consistent voice.',
@@ -86,7 +87,7 @@ const sections = [
       {
         heading: 'Design ownership at its most complete',
         body: 'By the time the store opened, every customer touchpoint was live and cohesive. The pre-launch list gave us a warm audience for the first order push.',
-        image: '/images/homeground-family.jpg',
+        image: img('/images/homeground-family.jpg'),
       },
       {
         body: 'Homeground is the project I\'m most personally invested in, and the one that most clearly shows what I\'m capable of when given full creative latitude. Every decision — from the name to the email footer — made with intention, and made by hand.',

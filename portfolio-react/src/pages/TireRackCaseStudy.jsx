@@ -1,4 +1,5 @@
 import CaseStudyTemplate from '../components/CaseStudyTemplate'
+import { img } from '../utils/img'
 import { workItems } from '../data/work'
 
 const item = workItems.find(w => w.id === 'tirerack')
@@ -15,7 +16,7 @@ const sections = [
       {
         heading: 'A site built for a different era',
         body: 'In 2012, Tire Rack\'s retail site was running on architecture from the early 2000s. No responsive design. No HTML5 or CSS3. A visual language rooted in skeuomorphism that had aged poorly. The site functioned, but it no longer reflected the company — or the standards customers had come to expect.',
-        image: '/images/old-tr.png',
+        image: img('/images/old-tr.png'),
       },
       {
         body: 'The goal was a ground-up redesign: a modern retail experience that would strengthen the brand, improve usability, and drive measurable growth in online traffic and conversions.',
@@ -46,7 +47,7 @@ const sections = [
       {
         heading: 'Section by section, system by system',
         body: 'The style guide was finalized from three concepts the team presented and became the visual foundation everything else was built from. Working from UX flows defined by the lead designer, we designed mockups section by section — ensuring consistency across a site with significant scale and complexity.',
-        image: '/images/mockups_tr.jpg',
+        image: img('/images/mockups_tr.jpg'),
       },
       {
         body: 'Each section was designed with the full user journey in mind — accounting for entry points, edge cases, and the gaps the old site left unaddressed.',
@@ -59,7 +60,7 @@ const sections = [
       {
         heading: 'Familiar, but finally modern',
         body: 'Tire Rack\'s signature red stayed front and center — brand equity worth protecting. Everything around it shifted: flat design replaced the dated skeuomorphic aesthetic, the secondary palette was pulled back to clean and restrained, and strong product photography gave the site a more premium feel. The result was recognizable but genuinely modern.',
-        image: '/images/ui-tr.png',
+        image: img('/images/ui-tr.png'),
       },
     ],
   },
@@ -78,7 +79,7 @@ const sections = [
       {
         heading: 'A foundation that lasted',
         body: 'The redesigned site launched in 2014. Traffic and sales increased following the launch, and the design system the team built became the foundation the company continued to build on for years after.',
-        image: '/images/final_tr.jpg',
+        image: img('/images/final_tr.jpg'),
       },
       {
         body: 'For me, Tire Rack was formative. It was where I learned what large-scale collaborative design actually looks like — structured process, shared systems, and accountability that extends beyond your own section of the work. Everything I\'ve done since has benefited from starting there.',

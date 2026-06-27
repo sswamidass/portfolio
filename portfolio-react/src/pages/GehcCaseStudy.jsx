@@ -1,4 +1,5 @@
 import CaseStudyTemplate from '../components/CaseStudyTemplate'
+import { img } from '../utils/img'
 import { workItems } from '../data/work'
 
 const item = workItems.find(w => w.id === 'gehc')
@@ -30,7 +31,7 @@ const sections = [
       },
       {
         body: 'Beyond safety, the experience had accumulated friction in every direction. Patient worklists were hard to navigate under time pressure. CT and MR followed different interaction models, so technologists who worked across both systems were constantly context-switching. Cognitive load was high, interruptions were frequent, and the interface didn\'t help absorb either.',
-        image: '/images/ct2.jpeg',
+        image: img('/images/ct2.jpeg'),
       },
       {
         body: 'Privacy added another layer. Patient health information visible on a screen in a shared clinical environment has compliance implications — HIPAA requirements don\'t pause for workflow efficiency.',
@@ -72,7 +73,7 @@ const sections = [
       {
         heading: 'Designed for the room, not the desk',
         body: 'The interface runs on 12–15.6" touch displays mounted in scan rooms — not at a desk. Typography was scaled for readability at distance. Touch targets were sized for gloved hands and high-stress interactions. The visual hierarchy was tuned to be readable from the gantry, the doorway, and the control window. It had to work in the actual environment, not just in a usability lab.',
-        image: '/images/ct1.jpeg',
+        image: img('/images/ct1.jpeg'),
       },
     ],
   },
@@ -103,5 +104,5 @@ const sections = [
 ]
 
 export default function GehcCaseStudy() {
-  return <CaseStudyTemplate item={item} intro={intro} introPhoto="/images/ct3.jpeg" sections={sections} />
+  return <CaseStudyTemplate item={item} intro={intro} introPhoto={img('/images/ct3.jpeg')} sections={sections} />
 }

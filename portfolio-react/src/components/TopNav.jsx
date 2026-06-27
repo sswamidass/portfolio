@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useActiveSection } from '../hooks/useActiveSection'
+import { img } from '../utils/img'
 
 const NAV_SECTIONS = ['about', 'services', 'skills', 'education', 'experience', 'work']
 const NAV_LABELS = {
@@ -28,7 +29,7 @@ export default function TopNav() {
   return (
     <nav id="top-nav">
       <a href="/" className="nav-logo">
-        <img className="nav-avatar" src="/images/about-winter.jpg" alt="Sanjay Swamidass" />
+        <img className="nav-avatar" src={img('/images/about-winter.jpg')} alt="Sanjay Swamidass" />
         Sanjay Swamidass
       </a>
 

@@ -1,4 +1,5 @@
 import CaseStudyTemplate from '../components/CaseStudyTemplate'
+import { img } from '../utils/img'
 import { workItems } from '../data/work'
 
 const item = workItems.find(w => w.id === 'remote360')
@@ -17,7 +18,7 @@ const sections = [
         body: 'The original remote360 was a Java desktop application built by an IoT partner. It proved the data infrastructure worked, but the experience didn\'t. Customers wanted real-time visibility on the go. What they got was a clunky, desktop-only interface that felt like it had been configured, not designed.',
       },
       {
-        image: '/images/ignition.png',
+        image: img('/images/ignition.png'),
       },
       {
         body: 'The IoT partner\'s strength was plumbing — sensors, data pipelines, infrastructure. Design was outside their scope. My role was to take ownership of everything the data touched: how it was organized, how it looked, and how it felt to use. I was the first and only designer on the project.',
@@ -33,7 +34,7 @@ const sections = [
       },
       {
         body: 'I ran interviews with customers, engineers, field technicians, and the sales team. The contrast between veteran users and new users was the most useful signal: experienced users had developed workarounds; newer users just hit walls. I synthesized those conversations into a primary persona that anchored every design decision that followed.',
-        image: '/images/persona.svg',
+        image: img('/images/persona.svg'),
       },
     ],
   },
@@ -55,11 +56,11 @@ const sections = [
       {
         heading: 'Listening before designing',
         body: 'The research was clear: the core data had value, but the path to it was too slow. Users wanted answers in one or two taps, not buried three levels deep. The web MVP needed to preserve what worked — the live data feed, the status indicators — and eliminate everything that didn\'t.',
-        image: '/images/ia.jpg',
+        image: img('/images/ia.jpg'),
       },
       {
         body: 'I structured the information architecture around access speed. Every navigation decision was evaluated against a single question: how quickly can someone get the answer they came for?',
-        image: '/images/wireframes.jpg',
+        image: img('/images/wireframes.jpg'),
       },
     ],
   },
@@ -69,11 +70,11 @@ const sections = [
       {
         heading: 'Dark by design',
         body: 'I tested three visual directions with technicians, product managers, and leadership. The dark interface won decisively — it felt native to the industrial context, reduced eye strain under harsh lighting, and gave the product a sharp identity that set it apart from generic enterprise software.',
-        image: '/images/mockups.jpg',
+        image: img('/images/mockups.jpg'),
       },
       {
         body: 'I rebuilt the color system from scratch, using the Java app\'s red, green, and yellow status indicators as a starting point — pulling them toward softer, more readable tones and building out a full supporting palette. Every icon in the product was redrawn. The result looked and felt like a different product.',
-        images: ['/images/ui-1.jpg', '/images/r360_StyleGuide.jpg'],
+        images: [img('/images/ui-1.jpg'), img('/images/r360_StyleGuide.jpg')],
       },
     ],
   },
@@ -92,7 +93,7 @@ const sections = [
       {
         heading: 'A product that made industry news',
         body: 'Beta testing with local customers confirmed the direction, and remote360 quickly became a differentiator in MC Machinery\'s service offering. The platform launched in 2016 and continued to evolve — tighter color usage, improved data visualizations, new features like automated PDF production reports delivered directly to customer inboxes.',
-        image: '/images/reports.png',
+        image: img('/images/reports.png'),
       },
       {
         body: 'The work got noticed beyond the company:',
@@ -105,7 +106,7 @@ const sections = [
         ],
       },
       {
-        images: ['/images/beforeafter.jpg', '/images/final_group.jpg'],
+        images: [img('/images/beforeafter.jpg'), img('/images/final_group.jpg')],
       },
       {
         body: 'remote360 taught me what it actually means to own a product. When you\'re the researcher, the designer, and the engineer, every decision is yours to live with. That kind of accountability doesn\'t leave you.',
