@@ -1,16 +1,5 @@
-/* ── Work Listing Page — design tokens ── */
+/* ── Work Listing Page ── */
 .wl-page {
-  /* Warm palette — cascades to CaseStudyNav + CaseStudyFooter via --cs-* vars */
-  --cs-paper:       #E8E1D4;
-  --cs-surface:     #FBF8F2;
-  --cs-ink:         #3A3B31;
-  --cs-ink-muted:   #6F6F62;
-  --cs-accent:      #1E4A38;
-  --cs-accent-soft: #2E6B4F;
-  --cs-line:        rgba(30, 40, 30, 0.08);
-  --cs-font:        'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  /* Page */
   background: var(--cs-paper);
   color: var(--cs-ink);
   font-family: var(--cs-font);
