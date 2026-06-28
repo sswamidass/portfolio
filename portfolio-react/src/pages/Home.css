@@ -11,17 +11,19 @@
 }
 
 .home-headline {
-  font-family: var(--font-serif);
+  font-family: var(--cs-font);
   font-size: clamp(2rem, 4.5vw, 3.25rem);
-  font-weight: normal;
-  line-height: 1.25;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--cs-accent);
   margin-bottom: 28px;
   max-width: 780px;
 }
 
 .home-intro {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: var(--color-muted);
+  color: var(--cs-ink-muted);
   line-height: 1.75;
   max-width: 780px;
 }

@@ -36,7 +36,7 @@
 .about-bio {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: #4a5568;
+  color: var(--cs-ink-muted);
   margin-bottom: 16px;
 }
 

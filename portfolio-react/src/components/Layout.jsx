@@ -1,5 +1,5 @@
 import CaseStudyNav from './CaseStudyNav'
-import Footer from './Footer'
+import CaseStudyFooter from './CaseStudyFooter'
 import './Layout.css'
 
 export default function Layout({ children }) {
@@ -9,7 +9,7 @@ export default function Layout({ children }) {
       <main className="layout-main">
         {children}
       </main>
-      <Footer />
+      <CaseStudyFooter />
     </div>
   )
 }
