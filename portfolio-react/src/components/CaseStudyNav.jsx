@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import { img } from '../utils/img'
 import './CaseStudyNav.css'
 
 export default function CaseStudyNav() {
@@ -34,14 +33,9 @@ export default function CaseStudyNav() {
         <NavLink to="/about" className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
           About
         </NavLink>
-        <a
-          href={img('/sswamidass_resume.pdf')}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cs-nav-link"
-        >
-          Resume
-        </a>
+        <NavLink to="/contact" className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
+          Contact
+        </NavLink>
       </div>
     </nav>
   )

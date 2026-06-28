@@ -8,6 +8,7 @@ import HomegroundCaseStudy from './pages/HomegroundCaseStudy'
 import R360CaseStudy from './pages/R360CaseStudy'
 import TireRackCaseStudy from './pages/TireRackCaseStudy'
 import K12CaseStudy from './pages/K12CaseStudy'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/work/remote360" element={<R360CaseStudy />} />
         <Route path="/work/tirerack" element={<TireRackCaseStudy />} />
         <Route path="/work/k12" element={<K12CaseStudy />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )

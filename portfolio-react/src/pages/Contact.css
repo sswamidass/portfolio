@@ -1,15 +1,107 @@
+.contact-page {
+  --cs-paper:       #E8E1D4;
+  --cs-surface:     #FBF8F2;
+  --cs-ink:         #3A3B31;
+  --cs-ink-muted:   #6F6F62;
+  --cs-accent:      #1E4A38;
+  --cs-accent-soft: #2E6B4F;
+  --cs-line:        rgba(30, 40, 30, 0.08);
+  --cs-font:        'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  background: var(--cs-paper);
+  color: var(--cs-ink);
+  font-family: var(--cs-font);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.contact-main {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.contact-col {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.contact-heading {
+  font-family: var(--cs-font);
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  font-weight: 900;
+  color: var(--cs-accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 72px;
+}
+
+/* ── Link rows ── */
 .contact-links {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-link-item {
+  border-top: 1px solid var(--cs-line);
+}
+
+.contact-link-item:last-child {
+  border-bottom: 1px solid var(--cs-line);
+}
+
+.contact-link {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: baseline;
+  gap: 16px;
+  padding: 28px 0;
+  text-decoration: none !important;
+  color: var(--cs-ink);
+  transition: color 0.15s;
 }
 
-.contact-links a {
-  font-size: 1.05rem;
-  color: var(--color-text);
+.contact-link:hover {
+  color: var(--cs-accent);
 }
 
-.contact-links a:hover {
-  text-decoration: underline;
+.contact-link-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cs-ink-muted);
+  min-width: 80px;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.contact-link:hover .contact-link-label {
+  color: var(--cs-accent-soft);
+}
+
+.contact-link-value {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 500;
+  flex: 1;
+}
+
+.contact-link-arrow {
+  font-size: 1.1rem;
+  color: var(--cs-ink-muted);
+  transition: transform 0.2s ease, color 0.15s;
+  margin-left: auto;
+}
+
+.contact-link:hover .contact-link-arrow {
+  transform: translate(3px, -3px);
+  color: var(--cs-accent);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .contact-col { padding: 0 20px; }
+  .contact-heading { margin-bottom: 48px; }
+  .contact-link { padding: 22px 0; }
+  .contact-link-value { font-size: 1rem; }
 }
