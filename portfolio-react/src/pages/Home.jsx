@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import Nav from '../components/Nav'
+import CaseStudyNav from '../components/CaseStudyNav'
 import './Home.css'
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <Nav />
+      <CaseStudyNav />
       <div className="home-center">
         <h1 className="home-headline">
           Sanjay Swamidass is a Senior Product Designer based in Chicago, Illinois.

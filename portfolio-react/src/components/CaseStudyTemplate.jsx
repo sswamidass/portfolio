@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Nav from './Nav'
+import CaseStudyNav from './CaseStudyNav'
 import BrowserMockup from './BrowserMockup'
 import CaseStudyFooter from './CaseStudyFooter'
 import './CaseStudyTemplate.css'
@@ -17,7 +17,7 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections })
 
   return (
     <div className="cs-page">
-      <Nav />
+      <CaseStudyNav />
 
       {/* Page hero — title on sand, no photo */}
       <div className="cs-col">
