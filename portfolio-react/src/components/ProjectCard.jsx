@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './ProjectCard.css'
 
-export default function ProjectCard({ variant = 'light', eyebrow, title, summary, href, media }) {
+export default function ProjectCard({ variant = 'light', eyebrow, title, summary, href }) {
   return (
     <Link to={href} className={`pc pc--${variant}`}>
       <div className="pc-header">
@@ -9,11 +9,7 @@ export default function ProjectCard({ variant = 'light', eyebrow, title, summary
         <h3 className="pc-title">{title}</h3>
         {summary && <p className="pc-summary">{summary}</p>}
       </div>
-      {media && (
-        <div className="pc-media">
-          <img src={media} alt={title} loading="lazy" />
-        </div>
-      )}
+      <div className="pc-media" />
     </Link>
   )
 }

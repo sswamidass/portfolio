@@ -87,29 +87,14 @@
 .pc--light .pc-summary { color: #6F6F62; }
 .pc--dark  .pc-summary { color: rgba(255, 255, 255, 0.6); }
 
-/* ── Media ── */
+/* ── Media placeholder ── */
 
 .pc-media {
-  flex: 1;
-  overflow: hidden;
-  margin-top: auto;
+  height: 280px;
 }
 
-.pc-media img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pc-media img { transition: none; }
-}
-
-.pc:hover .pc-media img {
-  transform: scale(1.02);
-}
+.pc--light .pc-media { background: rgba(30, 40, 30, 0.05); }
+.pc--dark  .pc-media { background: rgba(255, 255, 255, 0.04); }
 
 /* ── Responsive ── */
 

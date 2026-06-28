@@ -21,7 +21,6 @@ export const workItems = [
     summary: 'Leading interaction design for enterprise healthcare imaging systems.',
     eyebrow: 'INTERACTION DESIGN',
     cardVariant: 'dark',
-    cardMedia: img('/images/gehc-hero.jpg'),
   },
   {
     id: 'remote360',
@@ -43,7 +42,6 @@ export const workItems = [
     summary: 'Industrial UI/UX for precision manufacturing control systems.',
     eyebrow: 'UI/UX ENGINEERING',
     cardVariant: 'light',
-    cardMedia: img('/images/r360_StyleGuide.jpg'),
   },
   {
     id: 'tirerack',
@@ -65,7 +63,6 @@ export const workItems = [
     summary: 'E-commerce redesign for the largest online tire retailer in North America.',
     eyebrow: 'WEB DESIGN',
     cardVariant: 'dark',
-    cardMedia: img('/images/final_tr.jpg'),
   },
   {
     id: 'homeground',
@@ -84,7 +81,6 @@ export const workItems = [
     summary: "Brand identity and Shopify storefront for a Great Lakes coffee and kids' book subscription box.",
     eyebrow: 'BRAND & SHOPIFY',
     cardVariant: 'light',
-    cardMedia: img('/images/homeground-email-hero.png'),
   },
   {
     id: 'k12',
@@ -103,6 +99,5 @@ export const workItems = [
     summary: 'UI design for a live, online K-12 education platform.',
     eyebrow: 'UI DESIGN',
     cardVariant: 'dark',
-    cardMedia: img('/images/responsive_group_k12.png'),
   },
 ]
