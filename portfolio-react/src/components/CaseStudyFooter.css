@@ -1,6 +1,6 @@
 .csf {
-  background: var(--cs-paper, #F6F6F4);
-  border-top: 1px solid var(--cs-line, rgba(0,0,0,0.09));
+  background: var(--cs-paper, #E8E1D4);
+  border-top: 1px solid var(--cs-line, rgba(30, 40, 30, 0.08));
   padding: 80px 0 48px;
   font-family: var(--cs-font, 'Hanken Grotesk', sans-serif);
 }
@@ -23,7 +23,7 @@
   font-size: clamp(56px, 10vw, 96px);
   font-weight: 900;
   line-height: 1;
-  color: var(--cs-ink, #111110);
+  color: var(--cs-ink, #3A3B31);
   letter-spacing: -0.04em;
   flex-shrink: 0;
 }
@@ -39,7 +39,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--cs-ink-muted, #787874);
+  color: var(--cs-ink-muted, #6F6F62);
   margin-bottom: 16px;
 }
 
@@ -52,13 +52,13 @@
 
 .csf-col-links a {
   font-size: 0.9rem;
-  color: var(--cs-ink, #111110);
+  color: var(--cs-ink, #3A3B31);
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .csf-col-links a:hover {
-  color: var(--cs-ink-muted, #787874);
+  color: var(--cs-ink-muted, #6F6F62);
   text-decoration: underline;
 }
 
@@ -67,30 +67,30 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: var(--cs-ink-muted, #787874);
+  color: var(--cs-ink-muted, #6F6F62);
   padding-top: 24px;
-  border-top: 1px solid var(--cs-line, rgba(0,0,0,0.09));
+  border-top: 1px solid var(--cs-line, rgba(30, 40, 30, 0.08));
 }
 
 .csf-toggle {
   background: none;
-  border: 1px solid var(--cs-line, rgba(0,0,0,0.12));
+  border: 1px solid var(--cs-line, rgba(30, 40, 30, 0.12));
   border-radius: 999px;
   padding: 7px 10px;
   cursor: pointer;
-  color: var(--cs-ink-muted, #787874);
+  color: var(--cs-ink-muted, #6F6F62);
   display: flex;
   align-items: center;
   transition: color 0.15s, border-color 0.15s;
 }
 
 .csf-toggle:hover {
-  color: var(--cs-ink, #111110);
-  border-color: var(--cs-ink, #111110);
+  color: var(--cs-ink, #3A3B31);
+  border-color: var(--cs-ink, #3A3B31);
 }
 
 .csf-toggle:focus-visible {
-  outline: 2px solid var(--cs-ink, #111110);
+  outline: 2px solid var(--cs-ink, #3A3B31);
   outline-offset: 2px;
 }
 
