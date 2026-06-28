@@ -27,11 +27,11 @@ export default function CaseStudyNav() {
             opacity: indicator.ready ? 1 : 0,
           }}
         />
-        <NavLink to="/work" end={false} className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
-          Work
-        </NavLink>
         <NavLink to="/about" className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
           About
+        </NavLink>
+        <NavLink to="/work" end={false} className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
+          Work
         </NavLink>
         <NavLink to="/contact" className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
           Contact
