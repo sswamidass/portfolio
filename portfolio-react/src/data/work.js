@@ -62,7 +62,7 @@ export const workItems = [
     gated: false,
     summary: 'Industrial UI/UX for precision manufacturing control systems.',
     eyebrow: 'UI/UX ENGINEERING',
-    cardVariant: 'light',
+    cardVariant: 'dark',
     cardMedia: img('/images/r360-card.jpg'),
   },
   {
