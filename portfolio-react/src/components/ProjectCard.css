@@ -92,7 +92,7 @@
 .pc-media {
   height: 280px;
   position: relative;
-  background-size: cover;
+  background-size: 100%;
   background-position: center top;
 }
 
@@ -101,7 +101,7 @@
 
 /* Legacy selector kept for specificity */
 .pc-media[style] {
-  background-size: cover;
+  background-size: 100%;
   background-position: center top;
 }
 
