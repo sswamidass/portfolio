@@ -96,7 +96,7 @@
   height: 280px;
   position: relative;
   background-size: 100%;
-  background-position: 30px 25px;
+  background-position: 30px 0;
   background-repeat: no-repeat;
 }
 
@@ -106,7 +106,7 @@
 /* Legacy selector kept for specificity */
 .pc-media[style] {
   background-size: 100%;
-  background-position: 30px 25px;
+  background-position: 30px 0;
   background-repeat: no-repeat;
 }
 
