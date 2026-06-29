@@ -46,7 +46,7 @@ export default function About() {
       <CaseStudyNav />
       <main className="about-main">
         <div className="about-col">
-          <h1 className="about-heading">About.</h1>
+          <h1 className="about-heading">Hi, I'm Sanjay.</h1>
 
           <div className="about-profile">
             <img src={img('/images/about.jpg')} alt="Sanjay Swamidass" className="about-photo" />
