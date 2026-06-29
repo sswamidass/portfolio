@@ -7,7 +7,6 @@ export default function CaseStudyFooter() {
     <footer className="csf">
       <div className="csf-inner">
         <div className="csf-top">
-          <div className="csf-wordmark">Sanjay.</div>
           <div className="csf-cols">
             <div className="csf-col">
               <p className="csf-col-label">Elsewhere</p>
