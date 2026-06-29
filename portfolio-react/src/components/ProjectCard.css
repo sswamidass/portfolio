@@ -93,7 +93,8 @@
   height: 280px;
   position: relative;
   background-size: 100%;
-  background-position: center top;
+  background-position: 30px 25px;
+  background-repeat: no-repeat;
 }
 
 .pc--light .pc-media { background-color: rgba(30, 40, 30, 0.05); }
@@ -102,7 +103,8 @@
 /* Legacy selector kept for specificity */
 .pc-media[style] {
   background-size: 100%;
-  background-position: center top;
+  background-position: 30px 25px;
+  background-repeat: no-repeat;
 }
 
 /* ── Lock badge ── */
