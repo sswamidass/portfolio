@@ -137,88 +137,62 @@
   gap: 80px;
 }
 
-/* ── Cream card ── */
-.cs-card {
-  background: var(--cs-surface);
-  border-radius: var(--cs-radius);
-  border: 1px solid var(--cs-line);
-  box-shadow: var(--cs-shadow);
-  padding: 40px;
-}
-
-.cs-card-eyebrow {
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--cs-ink-muted);
-  margin-bottom: 32px;
-}
-
-.cs-card-body {
+/* ── Section block ── */
+.cs-section {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
-.cs-card-item {
+.cs-section-item {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
-.cs-card-heading {
+.cs-section-heading {
   font-family: var(--cs-font);
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   font-weight: 700;
   color: var(--cs-ink);
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin: 0;
+  margin: 0 0 12px;
 }
 
-.cs-card-para {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: var(--cs-ink-muted);
-  margin: 0;
+/* ── Callout ── */
+.cs-callout {
+  border-left: 2px solid var(--cs-ink);
+  padding: 4px 0 4px 24px;
+  margin: 8px 0;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: 500;
+  color: var(--cs-ink);
+  line-height: 1.55;
+  font-style: normal;
 }
 
-.cs-card-links {
+/* ── Inline link list ── */
+.cs-section-links {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 4px 0 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.cs-card-links a {
+.cs-section-links a {
   font-size: 0.9rem;
   color: var(--cs-ink);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--cs-line);
+  text-decoration-color: rgba(0, 0, 0, 0.2);
   transition: text-decoration-color 0.15s;
 }
 
-.cs-card-links a:hover {
+.cs-section-links a:hover {
   text-decoration-color: var(--cs-ink);
-}
-
-/* ── Statement block ── */
-.cs-statement {
-  padding: 0;
-}
-
-.cs-statement-heading {
-  font-family: var(--cs-font);
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  font-weight: 700;
-  color: var(--cs-ink);
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  margin: 0 0 16px;
 }
 
 /* ── Back link ── */
@@ -248,8 +222,6 @@
     padding-bottom: 56px;
   }
 
-  .cs-card { padding: 28px; border-radius: 16px; }
-
   .cs-photo-strip { padding: 0 20px; }
 
   .cs-sections { gap: 56px; }
@@ -257,7 +229,6 @@
 
 @media (max-width: 480px) {
   .cs-col { padding: 0 20px; }
-  .cs-card { padding: 22px; }
   .cs-page-title { margin-bottom: 36px; letter-spacing: -0.03em; }
   .cs-page-meta { gap: 24px 32px; }
   .cs-sections { padding-top: 64px; }

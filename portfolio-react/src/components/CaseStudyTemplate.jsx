@@ -5,10 +5,6 @@ import BrowserMockup from './BrowserMockup'
 import CaseStudyFooter from './CaseStudyFooter'
 import './CaseStudyTemplate.css'
 
-function isCardSection(section) {
-  return section.items.some(it => it.image || it.images || it.links)
-}
-
 export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false }) {
   useEffect(() => {
     document.title = `${item.company} — Sanjay Swamidass`
@@ -87,51 +83,37 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
 
       {/* Sections */}
       <div className="cs-col cs-sections">
-        {sections.map((section, i) => {
-          const card = isCardSection(section)
-          return card ? (
-            <div key={i} className="cs-card">
-              <p className="cs-card-eyebrow">{section.label}</p>
-              <div className="cs-card-body">
-                {section.items.map((it, j) => (
-                  <div key={j} className="cs-card-item">
-                    {it.heading && <h3 className="cs-card-heading">{it.heading}</h3>}
-                    {it.body && <p className="cs-card-para">{it.body}</p>}
-                    {it.image && (
-                      <BrowserMockup>
-                        <img src={it.image} alt={it.heading || ''} />
-                      </BrowserMockup>
-                    )}
-                    {it.images && (
-                      <BrowserMockup twoUp>
-                        {it.images.map((src, k) => <img key={k} src={src} alt="" />)}
-                      </BrowserMockup>
-                    )}
-                    {it.links && (
-                      <ul className="cs-card-links">
-                        {it.links.map((l, k) => (
-                          <li key={k}>
-                            <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
+        {sections.map((section, i) => (
+          <div key={i} className="cs-section">
+            <p className="cs-eyebrow">{section.label}</p>
+            {section.items.map((it, j) => (
+              <div key={j} className="cs-section-item">
+                {it.heading && <h3 className="cs-section-heading">{it.heading}</h3>}
+                {it.body && <p className="cs-body-text">{it.body}</p>}
+                {it.callout && <blockquote className="cs-callout">{it.callout}</blockquote>}
+                {it.image && (
+                  <BrowserMockup>
+                    <img src={it.image} alt={it.heading || ''} />
+                  </BrowserMockup>
+                )}
+                {it.images && (
+                  <BrowserMockup twoUp>
+                    {it.images.map((src, k) => <img key={k} src={src} alt="" />)}
+                  </BrowserMockup>
+                )}
+                {it.links && (
+                  <ul className="cs-section-links">
+                    {it.links.map((l, k) => (
+                      <li key={k}>
+                        <a href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
-            </div>
-          ) : (
-            <div key={i} className="cs-statement">
-              <p className="cs-eyebrow">{section.label}</p>
-              {section.items.map((it, j) => (
-                <div key={j}>
-                  {it.heading && <h3 className="cs-statement-heading">{it.heading}</h3>}
-                  {it.body && <p className="cs-body-text">{it.body}</p>}
-                </div>
-              ))}
-            </div>
-          )
-        })}
+            ))}
+          </div>
+        ))}
 
         <div className="cs-back">
           <Link to="/work">&#8592; All work</Link>
