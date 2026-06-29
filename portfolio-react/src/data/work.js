@@ -21,6 +21,7 @@ export const workItems = [
     summary: 'Leading interaction design for enterprise healthcare imaging systems.',
     eyebrow: 'INTERACTION DESIGN',
     cardVariant: 'dark',
+    cardMedia: img('/images/gehc-card.jpg'),
   },
   {
     id: 'homeground',

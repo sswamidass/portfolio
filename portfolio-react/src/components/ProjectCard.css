@@ -97,6 +97,12 @@
 .pc--light .pc-media { background: rgba(30, 40, 30, 0.05); }
 .pc--dark  .pc-media { background: rgba(255, 255, 255, 0.04); }
 
+/* When a media image is provided */
+.pc-media[style*="backgroundImage"] {
+  background-size: cover;
+  background-position: center;
+}
+
 /* ── Lock badge ── */
 
 .pc-lock {

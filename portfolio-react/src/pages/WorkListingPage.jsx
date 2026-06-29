@@ -37,6 +37,7 @@ export default function WorkListingPage() {
                   href={`/work/${item.slug}`}
                   gated={item.gated}
                   onGatedClick={item.gated ? () => setShowModal(true) : undefined}
+                  media={item.cardMedia}
                 />
               ))}
             </div>
