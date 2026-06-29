@@ -9,7 +9,7 @@ function isCardSection(section) {
   return section.items.some(it => it.image || it.images || it.links)
 }
 
-export default function CaseStudyTemplate({ item, intro, introPhoto, sections }) {
+export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false }) {
   useEffect(() => {
     document.title = `${item.company} — Sanjay Swamidass`
     window.scrollTo(0, 0)
@@ -26,38 +26,42 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections })
             <img
               src={item.logo}
               alt={item.company}
-              className="cs-page-logo"
+              className={`cs-page-logo${logoOnly ? ' cs-page-logo--color' : ''}`}
             />
           )}
-          <h1 className="cs-page-title">
-            {item.caseStudyTitle || item.company}.
-          </h1>
-          <div className="cs-page-meta">
-            {item.role && (
-              <div className="cs-page-meta-item">
-                <span className="cs-page-meta-label">Role</span>
-                <span className="cs-page-meta-value">{item.role}</span>
+          {!logoOnly && (
+            <>
+              <h1 className="cs-page-title">
+                {item.caseStudyTitle || item.company}.
+              </h1>
+              <div className="cs-page-meta">
+                {item.role && (
+                  <div className="cs-page-meta-item">
+                    <span className="cs-page-meta-label">Role</span>
+                    <span className="cs-page-meta-value">{item.role}</span>
+                  </div>
+                )}
+                {item.duration && (
+                  <div className="cs-page-meta-item">
+                    <span className="cs-page-meta-label">Timeline</span>
+                    <span className="cs-page-meta-value">{item.duration}</span>
+                  </div>
+                )}
+                {item.tools && (
+                  <div className="cs-page-meta-item">
+                    <span className="cs-page-meta-label">Tools</span>
+                    <span className="cs-page-meta-value">{item.tools}</span>
+                  </div>
+                )}
+                {item.team && (
+                  <div className="cs-page-meta-item">
+                    <span className="cs-page-meta-label">Team</span>
+                    <span className="cs-page-meta-value">{item.team}</span>
+                  </div>
+                )}
               </div>
-            )}
-            {item.duration && (
-              <div className="cs-page-meta-item">
-                <span className="cs-page-meta-label">Timeline</span>
-                <span className="cs-page-meta-value">{item.duration}</span>
-              </div>
-            )}
-            {item.tools && (
-              <div className="cs-page-meta-item">
-                <span className="cs-page-meta-label">Tools</span>
-                <span className="cs-page-meta-value">{item.tools}</span>
-              </div>
-            )}
-            {item.team && (
-              <div className="cs-page-meta-item">
-                <span className="cs-page-meta-label">Team</span>
-                <span className="cs-page-meta-value">{item.team}</span>
-              </div>
-            )}
-          </div>
+            </>
+          )}
         </div>
       </div>
 

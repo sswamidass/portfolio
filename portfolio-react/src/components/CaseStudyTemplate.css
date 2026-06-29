@@ -46,6 +46,11 @@
   filter: grayscale(100%);
 }
 
+.cs-page-logo--color {
+  filter: none;
+  opacity: 1;
+}
+
 .cs-page-title {
   font-family: var(--cs-font);
   font-size: clamp(3rem, 9vw, 6.5rem);
