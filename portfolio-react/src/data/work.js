@@ -41,6 +41,7 @@ export const workItems = [
     summary: "Brand identity and Shopify storefront for a Great Lakes coffee and kids' book subscription box.",
     eyebrow: 'BRAND & SHOPIFY',
     cardVariant: 'light',
+    cardMedia: img('/images/homeground-card.jpg'),
   },
   {
     id: 'remote360',
