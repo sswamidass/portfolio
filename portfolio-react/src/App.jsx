@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
 import WorkListingPage from './pages/WorkListingPage'
 import About from './pages/About'
 import GehcCaseStudy from './pages/GehcCaseStudy'
@@ -14,9 +13,8 @@ function App() {
   return (
     <BrowserRouter basename="/portfolio-new">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<About />} />
         <Route path="/work" element={<WorkListingPage />} />
-        <Route path="/about" element={<About />} />
         <Route path="/work/gehc" element={
           <GehcGuard><GehcCaseStudy /></GehcGuard>
         } />

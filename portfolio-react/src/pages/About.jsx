@@ -37,7 +37,7 @@ const values = [
 
 export default function About() {
   useEffect(() => {
-    document.title = 'About — Sanjay Swamidass'
+    document.title = 'Sanjay Swamidass — Product Designer'
     window.scrollTo(0, 0)
   }, [])
 
