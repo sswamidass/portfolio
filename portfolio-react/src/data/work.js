@@ -21,7 +21,7 @@ export const workItems = [
     summary: 'Leading interaction design for enterprise healthcare imaging systems.',
     eyebrow: 'INTERACTION DESIGN',
     cardVariant: 'dark',
-    cardMedia: img('/images/gehc-card.jpg'),
+    cardMedia: img('/images/gehc-card-2.jpg'),
   },
   {
     id: 'homeground',
@@ -41,7 +41,7 @@ export const workItems = [
     summary: "Brand identity and Shopify storefront for a Great Lakes coffee and kids' book subscription box.",
     eyebrow: 'BRAND & SHOPIFY',
     cardVariant: 'light',
-    cardMedia: img('/images/homeground-card.jpg'),
+    cardMedia: img('/images/homeground-card-2.jpg'),
   },
   {
     id: 'remote360',
