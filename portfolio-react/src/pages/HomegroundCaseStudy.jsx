@@ -49,7 +49,7 @@ const sections = [
       {
         heading: 'Building the world',
         body: 'The identity started with the name — Homeground — and the associations it carries: the ground beneath your feet, home as a place you return to, the grounds in a coffee cup. From that I built a visual language rooted in the natural world: a botanical illustration system, an earthy palette anchored in deep greens and warm neutrals, and typography that balanced warmth with literary credibility.',
-        image: img('/images/homeground-founders.jpg'),
+        image: img('/images/homeground-brand-identity.jpg'),
       },
       {
         body: 'Every element was codified into a living style guide — color tokens, type scale, illustration usage rules, logo clearance, and voice guidelines — so the brand could grow without drifting.',
