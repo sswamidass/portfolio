@@ -26,7 +26,7 @@ const values = [
   {
     icon: '📦',
     heading: 'Co-founder, Homeground.',
-    body: "Built with my partner Sara. A subscription box for Great Lakes families: coffee for the grown-ups, kids' books for everyone else.",
+    body: "Homeground is a Midwest-themed seasonal subscription box that pairs curated books with small-batch, Midwest-roasted coffee, built around literacy, slow living, and intentionally sourced craft. I co-founded it with my partner Sara, leading the brand and product experience from storefront and visual identity to the unboxing moment and seasonal voice.",
   },
   {
     icon: '🎨',
