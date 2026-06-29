@@ -64,6 +64,9 @@
 .pc--light .pc-eyebrow { color: var(--cs-ink-muted); }
 .pc--dark  .pc-eyebrow { color: rgba(255, 255, 255, 0.55); }
 
+.pc--light .pc-header { background-color: rgba(30, 40, 30, 0.05); }
+.pc--dark  .pc-header { background-color: rgba(255, 255, 255, 0.04); }
+
 .pc-title {
   font-family: 'Hanken Grotesk', -apple-system, sans-serif;
   font-size: clamp(1.9rem, 4.5vw, 3rem);
