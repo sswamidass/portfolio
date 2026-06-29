@@ -85,6 +85,7 @@ export const workItems = [
     summary: 'E-commerce redesign for the largest online tire retailer in North America.',
     eyebrow: 'WEB DESIGN',
     cardVariant: 'dark',
+    cardMedia: img('/images/tr-card.jpg'),
   },
   {
     id: 'k12',
