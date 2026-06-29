@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import './CaseStudyNav.css'
 
 export default function CaseStudyNav() {
   const location = useLocation()
   const trackRef = useRef(null)
   const [indicator, setIndicator] = useState({ left: 0, width: 0, ready: false })
+
+  // Show back arrow on case study routes: /work/something (not just /work)
+  const isCaseStudy = location.pathname.startsWith('/work/') && location.pathname.length > '/work/'.length
 
   useEffect(() => {
     const track = trackRef.current
@@ -17,7 +20,15 @@ export default function CaseStudyNav() {
   }, [location.pathname])
 
   return (
-    <nav className="cs-nav" aria-label="Site navigation">
+    <nav className={`cs-nav${isCaseStudy ? ' cs-nav--with-back' : ''}`} aria-label="Site navigation">
+      {isCaseStudy && (
+        <Link to="/work" className="cs-back-pill">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M9 2L4 7L9 12" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="cs-back-label">Work</span>
+        </Link>
+      )}
       <div className="cs-nav-pill" ref={trackRef}>
         <span
           className="cs-nav-indicator"

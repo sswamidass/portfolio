@@ -6,6 +6,23 @@
   z-index: 200;
 }
 
+/* When back arrow is visible, stretch nav full-width */
+.cs-nav--with-back {
+  left: 0;
+  right: 0;
+  transform: none;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+
+/* Keep main pill centered in the full-width bar */
+.cs-nav--with-back .cs-nav-pill {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .cs-nav-pill {
   position: relative;
   display: flex;
@@ -62,9 +79,45 @@
   color: var(--cs-accent, #1E4A38);
 }
 
+/* ── Back pill ── */
+.cs-back-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 999px;
+  padding: 8px 16px 8px 12px;
+  border: 1px solid rgba(30, 40, 30, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  font-family: var(--cs-font, 'Hanken Grotesk', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #3A3B31;
+  text-decoration: none !important;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  z-index: 1;
+  position: relative;
+}
+
+.cs-back-pill:hover {
+  background: rgba(255, 255, 255, 0.80);
+  color: #1E4A38;
+}
+
 @media (max-width: 480px) {
   .cs-nav-link {
     padding: 7px 12px;
     font-size: 0.8rem;
+  }
+
+  .cs-back-label {
+    display: none;
+  }
+
+  .cs-nav--with-back {
+    padding: 0 16px;
   }
 }

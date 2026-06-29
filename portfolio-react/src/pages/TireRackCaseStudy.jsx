@@ -89,5 +89,5 @@ const sections = [
 ]
 
 export default function TireRackCaseStudy() {
-  return <CaseStudyTemplate item={item} intro={intro} sections={sections} />
+  return <CaseStudyTemplate item={item} intro={intro} sections={sections} logoOnly />
 }

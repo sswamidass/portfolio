@@ -6,6 +6,7 @@ import './About.css'
 
 const experience = [
   { role: 'Sr. IxD & UX Lead', company: 'GE HealthCare', years: '2021 – Present' },
+  { role: 'Co-Founder', company: 'Homeground', years: '2025 – Present' },
   { role: 'UI/UX Engineer', company: 'Mitsubishi EDM/Laser', years: '2015 – 2021' },
   { role: 'Web Designer', company: 'Tire Rack', years: '2012 – 2015' },
   { role: 'Web Designer', company: 'Andrews University', years: '2011 – 2012' },
@@ -52,7 +53,7 @@ export default function About() {
             <img src={img('/images/about.jpg')} alt="Sanjay Swamidass" className="about-photo" />
             <div>
               <p className="about-bio">
-                I'm a Senior Product Designer with 10+ years of experience, currently leading interaction design at GE HealthCare. I design for complexity — healthcare systems, industrial tools, e-commerce — and believe the best interfaces are the ones that get out of the way.
+                I'm a Senior Product Designer with 14+ years of experience, currently leading interaction design at GE HealthCare. I design for complexity — healthcare systems, industrial tools, e-commerce — and believe the best interfaces are the ones that get out of the way.
               </p>
               <p className="about-bio">
                 Outside of work, I co-founded Homeground with my partner Sara, a Great Lakes coffee and kids' book subscription box built on the same principle: good things, thoughtfully made. I live in Chicago, and when I'm not designing, I'm probably tending a sourdough starter or dialing in a pour-over.

@@ -1,11 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import CaseStudyNav from '../components/CaseStudyNav'
 import ProjectCard from '../components/ProjectCard'
 import CaseStudyFooter from '../components/CaseStudyFooter'
+import PasswordModal from '../components/PasswordModal'
 import { workItems } from '../data/work'
 import './WorkListingPage.css'
 
 export default function WorkListingPage() {
+  const [showModal, setShowModal] = useState(false)
+
   useEffect(() => {
     document.title = 'Work — Sanjay Swamidass'
     window.scrollTo(0, 0)
@@ -32,7 +35,8 @@ export default function WorkListingPage() {
                   title={item.company}
                   summary={item.summary}
                   href={`/work/${item.slug}`}
-                  media={item.cardMedia}
+                  gated={item.gated}
+                  onGatedClick={item.gated ? () => setShowModal(true) : undefined}
                 />
               ))}
             </div>
@@ -55,6 +59,7 @@ export default function WorkListingPage() {
       </main>
 
       <CaseStudyFooter />
+      {showModal && <PasswordModal onClose={() => setShowModal(false)} />}
     </div>
   )
 }

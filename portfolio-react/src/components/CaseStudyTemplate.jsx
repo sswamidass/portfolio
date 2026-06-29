@@ -4,14 +4,14 @@ import CaseStudyNav from './CaseStudyNav'
 import CaseStudyFooter from './CaseStudyFooter'
 import './CaseStudyTemplate.css'
 
-export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false }) {
+export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false, dark = false }) {
   useEffect(() => {
     document.title = `${item.company} — Sanjay Swamidass`
     window.scrollTo(0, 0)
   }, [item.company])
 
   return (
-    <div className="cs-page">
+    <div className={`cs-page${dark ? ' cs-page--dark' : ''}`}>
       <CaseStudyNav />
 
       {/* Page hero — title on sand, no photo */}
@@ -44,7 +44,7 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
                 )}
                 {item.tools && (
                   <div className="cs-page-meta-item">
-                    <span className="cs-page-meta-label">Tools</span>
+                    <span className="cs-page-meta-label">Expertise</span>
                     <span className="cs-page-meta-value">{item.tools}</span>
                   </div>
                 )}

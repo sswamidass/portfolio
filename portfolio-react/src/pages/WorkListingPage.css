@@ -53,9 +53,13 @@
 
 /* ── Cards ── */
 .wl-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .wl-cards { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* ── In Progress placeholder ── */

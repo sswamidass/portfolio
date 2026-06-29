@@ -97,5 +97,5 @@ const sections = [
 ]
 
 export default function HomegroundCaseStudy() {
-  return <CaseStudyTemplate item={item} intro={intro} sections={sections} />
+  return <CaseStudyTemplate item={item} intro={intro} sections={sections} logoOnly />
 }

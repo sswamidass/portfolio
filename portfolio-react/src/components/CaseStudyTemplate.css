@@ -252,3 +252,20 @@
   .cs-page-meta { gap: 24px 32px; }
   .cs-sections { padding-top: 64px; }
 }
+
+/* ── Dark theme (remote360) ── */
+.cs-page--dark {
+  --cs-paper:       #141414;
+  --cs-surface:     #1f1f1f;
+  --cs-ink:         #EDEBE6;
+  --cs-ink-muted:   rgba(237, 235, 230, 0.55);
+  --cs-accent:      #EDEBE6;
+  --cs-accent-soft: rgba(237, 235, 230, 0.75);
+  --cs-line:        rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 600px) {
+  .cs-section-images {
+    grid-template-columns: 1fr;
+  }
+}

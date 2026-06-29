@@ -112,7 +112,10 @@ const sections = [
         ],
       },
       {
-        images: [img('/images/beforeafter.jpg'), img('/images/final_group.jpg')],
+        image: img('/images/beforeafter.jpg'),
+      },
+      {
+        image: img('/images/final_group.jpg'),
       },
       {
         body: 'remote360 taught me what it actually means to own a product. When you\'re the researcher, the designer, and the engineer, every decision is yours to live with. That kind of accountability doesn\'t leave you.',
@@ -122,5 +125,5 @@ const sections = [
 ]
 
 export default function R360CaseStudy() {
-  return <CaseStudyTemplate item={item} intro={intro} sections={sections} logoOnly />
+  return <CaseStudyTemplate item={item} intro={intro} sections={sections} logoOnly dark />
 }

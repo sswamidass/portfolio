@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { img } from '../utils/img'
+import { contactLinks } from '../data/contact'
 import './CaseStudyFooter.css'
 
 export default function CaseStudyFooter() {
@@ -7,26 +6,22 @@ export default function CaseStudyFooter() {
     <footer className="csf">
       <div className="csf-inner">
         <div className="csf-top">
-          <div className="csf-cols">
-            <div className="csf-col">
-              <p className="csf-col-label">Elsewhere</p>
-              <ul className="csf-col-links">
-                <li><a href="https://linkedin.com/in/sanjay-swamidass-a860103a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://instagram.com/tha_sanj/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li><a href={img('/sswamidass_resume.pdf')} target="_blank" rel="noopener noreferrer">Resume PDF</a></li>
-              </ul>
-            </div>
-            <div className="csf-col">
-              <p className="csf-col-label">Contact</p>
-              <ul className="csf-col-links">
-                <li><a href="mailto:swamidass.sanjay@gmail.com">swamidass.sanjay@gmail.com</a></li>
-                <li><Link to="/work">Back to work</Link></li>
-              </ul>
-            </div>
+          <div className="csf-links">
+            {contactLinks.map(link => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="csf-link"
+                {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <span className="csf-link-label">{link.label}</span>
+                <span className="csf-link-value">{link.value}</span>
+              </a>
+            ))}
           </div>
         </div>
         <div className="csf-bottom">
-          <span>Senior Product Designer — Chicago, IL</span>
+          <span>Senior Product Designer, Chicago, IL</span>
           <button className="csf-toggle" aria-label="Toggle theme (coming soon)" title="Theme toggle">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <circle cx="8" cy="8" r="3.5" stroke="currentColor" strokeWidth="1.5"/>
