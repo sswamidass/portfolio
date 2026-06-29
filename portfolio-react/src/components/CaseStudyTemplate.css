@@ -172,6 +172,25 @@
   font-style: normal;
 }
 
+/* ── Images ── */
+.cs-section-image {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.cs-section-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cs-section-images img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
 /* ── Inline link list ── */
 .cs-section-links {
   list-style: none;

@@ -30,7 +30,10 @@ const sections = [
     items: [
       {
         heading: 'The person on the floor',
-        body: 'The people using remote360 weren\'t sitting at a desk. They were floor managers and service technicians in loud, fast-moving industrial environments — people who needed a fast answer about a machine, not a dashboard full of charts to parse. Downtime costs money. Every extra tap is a liability.',
+        body: 'The people using remote360 weren\'t sitting at a desk. They were floor managers and service technicians in loud, fast-moving industrial environments — people who needed a fast answer about a machine, not a dashboard full of charts to parse.',
+      },
+      {
+        callout: 'Downtime costs money. Every extra tap is a liability.',
       },
       {
         body: 'I ran interviews with customers, engineers, field technicians, and the sales team. The contrast between veteran users and new users was the most useful signal: experienced users had developed workarounds; newer users just hit walls. I synthesized those conversations into a primary persona that anchored every design decision that followed.',
@@ -44,6 +47,9 @@ const sections = [
       {
         heading: 'One designer, end to end',
         body: 'I was embedded in the Business Systems team with a back-end developer, a network technician, and a department manager who had championed the product from the start. I owned the full design lifecycle: user research, information architecture, interaction design, visual design, prototyping, and front-end development in HTML5, SCSS, JavaScript, PHP, and MySQL.',
+      },
+      {
+        callout: 'Six years. One designer. One product.',
       },
       {
         body: 'Working alone across design and development meant no translation loss between intent and execution. When I made a decision at the whiteboard, I was the one building it. That accountability changed how I made decisions.',

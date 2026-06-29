@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import CaseStudyNav from './CaseStudyNav'
-import BrowserMockup from './BrowserMockup'
 import CaseStudyFooter from './CaseStudyFooter'
 import './CaseStudyTemplate.css'
 
@@ -75,9 +74,7 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
       {/* Full-bleed intro photo */}
       {introPhoto && (
         <div className="cs-photo-strip">
-          <BrowserMockup>
-            <img src={introPhoto} alt="" />
-          </BrowserMockup>
+          <img src={introPhoto} alt="" className="cs-section-image" />
         </div>
       )}
 
@@ -92,14 +89,12 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
                 {it.body && <p className="cs-body-text">{it.body}</p>}
                 {it.callout && <blockquote className="cs-callout">{it.callout}</blockquote>}
                 {it.image && (
-                  <BrowserMockup>
-                    <img src={it.image} alt={it.heading || ''} />
-                  </BrowserMockup>
+                  <img src={it.image} alt={it.heading || ''} className="cs-section-image" />
                 )}
                 {it.images && (
-                  <BrowserMockup twoUp>
+                  <div className="cs-section-images">
                     {it.images.map((src, k) => <img key={k} src={src} alt="" />)}
-                  </BrowserMockup>
+                  </div>
                 )}
                 {it.links && (
                   <ul className="cs-section-links">
