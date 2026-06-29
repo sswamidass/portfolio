@@ -92,15 +92,17 @@
 .pc-media {
   height: 280px;
   position: relative;
+  background-size: cover;
+  background-position: center top;
 }
 
-.pc--light .pc-media { background: rgba(30, 40, 30, 0.05); }
-.pc--dark  .pc-media { background: rgba(255, 255, 255, 0.04); }
+.pc--light .pc-media { background-color: rgba(30, 40, 30, 0.05); }
+.pc--dark  .pc-media { background-color: rgba(255, 255, 255, 0.04); }
 
-/* When a media image is provided */
-.pc-media[style*="backgroundImage"] {
+/* Legacy selector kept for specificity */
+.pc-media[style] {
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 
 /* ── Lock badge ── */
