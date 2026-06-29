@@ -63,6 +63,7 @@ export const workItems = [
     summary: 'Industrial UI/UX for precision manufacturing control systems.',
     eyebrow: 'UI/UX ENGINEERING',
     cardVariant: 'light',
+    cardMedia: img('/images/r360-card.jpg'),
   },
   {
     id: 'tirerack',
