@@ -42,6 +42,7 @@ export const workItems = [
     eyebrow: 'BRAND & SHOPIFY',
     cardVariant: 'light',
     cardMedia: img('/images/homeground-card-2.jpg'),
+    cardLogoStyle: { filter: 'brightness(0)' },
   },
   {
     id: 'remote360',

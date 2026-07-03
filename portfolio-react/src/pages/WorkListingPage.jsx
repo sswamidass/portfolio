@@ -34,6 +34,7 @@ export default function WorkListingPage() {
                   eyebrow={item.eyebrow}
                   title={item.company}
                   logo={item.logo}
+                  logoStyle={item.cardLogoStyle}
                   summary={item.summary}
                   href={`/work/${item.slug}`}
                   gated={item.gated}
