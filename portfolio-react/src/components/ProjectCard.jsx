@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 import './ProjectCard.css'
 
-export default function ProjectCard({ variant = 'light', eyebrow, title, summary, href, gated = false, onGatedClick, media }) {
+export default function ProjectCard({ variant = 'light', eyebrow, title, logo, summary, href, gated = false, onGatedClick, media }) {
   const inner = (
     <>
       <div className="pc-header">
         {eyebrow && <span className="pc-eyebrow">{eyebrow}</span>}
-        <h3 className="pc-title">{title}</h3>
+        {logo
+          ? <img src={logo} alt={title} className="pc-logo" />
+          : <h3 className="pc-title">{title}</h3>
+        }
         {summary && <p className="pc-summary">{summary}</p>}
       </div>
       <div className="pc-media" style={media ? { backgroundImage: `url(${media})` } : undefined}>

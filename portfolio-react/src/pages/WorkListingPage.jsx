@@ -33,6 +33,7 @@ export default function WorkListingPage() {
                   variant={item.cardVariant}
                   eyebrow={item.eyebrow}
                   title={item.company}
+                  logo={item.logo}
                   summary={item.summary}
                   href={`/work/${item.slug}`}
                   gated={item.gated}
