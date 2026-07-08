@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { img } from '../utils/img'
 import './CaseStudyNav.css'
 
 export default function CaseStudyNav() {
@@ -38,8 +39,8 @@ export default function CaseStudyNav() {
             opacity: indicator.ready ? 1 : 0,
           }}
         />
-        <NavLink to="/" end className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
-          About
+        <NavLink to="/" end className={({ isActive }) => `cs-nav-link cs-nav-link--mark${isActive ? ' active' : ''}`}>
+          <img src={img('/ss-mark-128.png')} alt="Sanjay Swamidass" className="cs-nav-mark" />
         </NavLink>
         <NavLink to="/work" end={false} className={({ isActive }) => `cs-nav-link${isActive ? ' active' : ''}`}>
           Work

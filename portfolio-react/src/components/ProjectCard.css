@@ -133,6 +133,18 @@
 }
 
 /* ── Dark mode overrides ── */
+
+/* Light cards stay light regardless of page theme */
+[data-theme="dark"] .pc--light {
+  background: #FBF8F2;
+}
+[data-theme="dark"] .pc--light .pc-eyebrow { color: #6F6F62; }
+[data-theme="dark"] .pc--light .pc-header { background-color: rgba(30, 40, 30, 0.05); }
+[data-theme="dark"] .pc--light .pc-title { color: #3A3B31; }
+[data-theme="dark"] .pc--light .pc-summary { color: #6F6F62; }
+[data-theme="dark"] .pc--light .pc-media { background-color: rgba(30, 40, 30, 0.05); }
+
+/* Dark cards get slightly lifted background for contrast against dark page */
 [data-theme="dark"] .pc--dark {
   background: #242424;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.30);

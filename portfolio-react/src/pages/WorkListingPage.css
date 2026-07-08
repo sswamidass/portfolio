@@ -103,11 +103,11 @@
   .wl-cards > *:nth-child(4) { order: 3; }
 }
 
-/* ── In Progress placeholder ── */
+/* ── More work callout ── */
 .wl-placeholder {
-  border: 1.5px dashed rgba(30, 40, 30, 0.2);
+  border: 1.5px solid var(--cs-line);
   border-radius: 26px;
-  padding: 72px 40px;
+  padding: 80px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,15 +115,26 @@
 
 .wl-placeholder-inner {
   text-align: center;
+  max-width: 480px;
 }
 
-.wl-placeholder-label {
+.wl-more-heading {
   font-family: var(--cs-font);
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--cs-ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.wl-more-sub {
+  font-family: var(--cs-font);
+  font-size: 0.9375rem;
+  font-weight: 400;
   color: var(--cs-ink-muted);
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ── Responsive ── */

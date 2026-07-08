@@ -44,15 +44,12 @@ export default function WorkListingPage() {
             </div>
           </section>
 
-          {/* In Progress — placeholder */}
+          {/* More work callout */}
           <section className="wl-section">
-            <header className="wl-section-head">
-              <h2 className="wl-section-heading">In Progress.</h2>
-              <p className="wl-section-sub">Work in various states of design and development. Check back soon.</p>
-            </header>
             <div className="wl-placeholder">
               <div className="wl-placeholder-inner">
-                <span className="wl-placeholder-label">Something's cooking</span>
+                <p className="wl-more-heading">A few favorites from 10+ years of work.</p>
+                <p className="wl-more-sub">Healthcare, retail, education, consumer brands, and more. Additional work available on request.</p>
               </div>
             </div>
           </section>

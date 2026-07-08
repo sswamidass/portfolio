@@ -72,6 +72,18 @@
   cursor: pointer;
 }
 
+.cs-nav-link--mark {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.cs-nav-mark {
+  display: block;
+  height: 22px;
+  width: auto;
+}
+
 .cs-nav-link:hover {
   color: var(--cs-accent, #1E4A38);
   text-decoration: none !important;

@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import CaseStudyNav from '../components/CaseStudyNav'
-import CaseStudyFooter from '../components/CaseStudyFooter'
 import { contactLinks as links } from '../data/contact'
 import './Contact.css'
 
@@ -32,7 +31,6 @@ export default function Contact() {
           </ul>
         </div>
       </main>
-      <CaseStudyFooter />
     </div>
   )
 }
