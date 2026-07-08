@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './ProjectCard.css'
 
-export default function ProjectCard({ variant = 'light', eyebrow, title, logo, logoStyle, summary, href, gated = false, onGatedClick, media }) {
+export default function ProjectCard({ variant = 'light', eyebrow, title, logo, logoStyle, summary, href, gated = false, onGatedClick, media, mediaPosition, mediaPull }) {
   const inner = (
     <>
       <div className="pc-header">
@@ -12,7 +12,7 @@ export default function ProjectCard({ variant = 'light', eyebrow, title, logo, l
         }
         {summary && <p className="pc-summary">{summary}</p>}
       </div>
-      <div className="pc-media" style={media ? { backgroundImage: `url(${media})` } : undefined}>
+      <div className="pc-media" style={{ ...(media ? { backgroundImage: `url(${media})` } : {}), ...(mediaPosition ? { backgroundPosition: mediaPosition } : {}), ...(mediaPull ? { marginTop: `-${mediaPull}px` } : {}) }}>
         {gated && (
           <div className="pc-lock">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">

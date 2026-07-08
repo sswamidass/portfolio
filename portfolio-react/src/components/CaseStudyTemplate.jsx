@@ -6,7 +6,7 @@ import './CaseStudyTemplate.css'
 
 export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false, dark = false }) {
   useEffect(() => {
-    document.title = `${item.company} — Sanjay Swamidass`
+    document.title = `${item.company} | Sanjay Swamidass`
     window.scrollTo(0, 0)
   }, [item.company])
 

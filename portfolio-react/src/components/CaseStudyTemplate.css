@@ -12,6 +12,14 @@
   --cs-font:        'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --cs-col:         760px;
 
+  /* Lock nav and footer to light regardless of global theme */
+  --nav-pill-bg:          rgba(255, 255, 255, 0.55);
+  --nav-pill-border:      rgba(30, 40, 30, 0.10);
+  --nav-indicator-bg:     #fff;
+  --nav-back-color:       #3A3B31;
+  --nav-back-hover-bg:    rgba(255, 255, 255, 0.80);
+  --nav-back-hover-color: #1E4A38;
+
   background: var(--cs-paper);
   color: var(--cs-ink);
   font-family: var(--cs-font);

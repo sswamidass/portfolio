@@ -24,7 +24,7 @@ export default function PasswordModal({ onClose }) {
         <button className="modal-close" onClick={onClose} aria-label="Close">×</button>
         <h2 className="modal-heading">This case study is password protected.</h2>
         <p className="modal-body">
-          This work is protected by NDA — not because it isn't worth sharing, but because the people and systems involved deserve that care. If you're a recruiter, hiring manager, or fellow designer, I'm happy to walk you through it directly.
+          This work is protected by NDA, not because it isn't worth sharing, but because the people and systems involved deserve that care. If you're a recruiter, hiring manager, or fellow designer, I'm happy to walk you through it directly.
         </p>
         <form onSubmit={handleSubmit} className="modal-form">
           <input

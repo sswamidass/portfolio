@@ -47,7 +47,7 @@
 /* ── Header ── */
 
 .pc-header {
-  padding: 36px 40px 32px;
+  padding: 44px 48px 40px;
   text-align: right;
 }
 
@@ -72,7 +72,8 @@
   height: 36px;
   max-width: 180px;
   object-fit: contain;
-  object-position: left center;
+  object-position: right center;
+  margin-left: auto;
   margin-bottom: 14px;
 }
 
@@ -102,22 +103,15 @@
 /* ── Media placeholder ── */
 
 .pc-media {
-  height: 280px;
+  height: 340px;
   position: relative;
-  background-size: 100%;
-  background-position: 30px 0;
+  background-size: cover;
+  background-position: calc(50% + 50px) top;
   background-repeat: no-repeat;
 }
 
 .pc--light .pc-media { background-color: rgba(30, 40, 30, 0.05); }
 .pc--dark  .pc-media { background-color: rgba(255, 255, 255, 0.04); }
-
-/* Legacy selector kept for specificity */
-.pc-media[style] {
-  background-size: 100%;
-  background-position: 30px 0;
-  background-repeat: no-repeat;
-}
 
 /* ── Lock badge ── */
 
@@ -138,15 +132,29 @@
   pointer-events: none;
 }
 
+/* ── Dark mode overrides ── */
+[data-theme="dark"] .pc--dark {
+  background: #242424;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.30);
+}
+
+[data-theme="dark"] .pc--dark:hover {
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.50);
+}
+
 /* ── Responsive ── */
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .pc-header {
-    padding: 28px 28px 24px;
+    padding: 32px 32px 28px;
     text-align: left;
   }
 
   .pc-title {
     font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .pc-media {
+    height: 240px;
   }
 }

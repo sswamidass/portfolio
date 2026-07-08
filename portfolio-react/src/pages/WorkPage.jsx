@@ -13,7 +13,7 @@ export default function WorkPage() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    document.title = 'Work — Sanjay Swamidass'
+    document.title = 'Work | Sanjay Swamidass'
   }, [])
 
   useEffect(() => {

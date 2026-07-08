@@ -27,26 +27,28 @@
   position: relative;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--nav-pill-bg, rgba(255, 255, 255, 0.55));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 999px;
   padding: 4px;
-  border: 1px solid rgba(30, 40, 30, 0.1);
+  border: 1px solid var(--nav-pill-border, rgba(30, 40, 30, 0.1));
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: background 0.25s, border-color 0.25s;
 }
 
 .cs-nav-indicator {
   position: absolute;
   top: 4px;
   bottom: 4px;
-  background: #fff;
+  background: var(--nav-indicator-bg, #fff);
   border-radius: 999px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   pointer-events: none;
   transition: left 0.24s cubic-bezier(0.4, 0, 0.2, 1),
               width 0.24s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0.12s;
+              opacity 0.12s,
+              background 0.25s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -84,27 +86,27 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--nav-pill-bg, rgba(255, 255, 255, 0.55));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-radius: 999px;
   padding: 8px 16px 8px 12px;
-  border: 1px solid rgba(30, 40, 30, 0.1);
+  border: 1px solid var(--nav-pill-border, rgba(30, 40, 30, 0.1));
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
   font-family: var(--cs-font, 'Hanken Grotesk', sans-serif);
   font-size: 0.875rem;
   font-weight: 500;
-  color: #3A3B31;
+  color: var(--nav-back-color, #3A3B31);
   text-decoration: none !important;
-  transition: color 0.15s, background 0.15s;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
   white-space: nowrap;
   z-index: 1;
   position: relative;
 }
 
 .cs-back-pill:hover {
-  background: rgba(255, 255, 255, 0.80);
-  color: #1E4A38;
+  background: var(--nav-back-hover-bg, rgba(255, 255, 255, 0.80));
+  color: var(--nav-back-hover-color, #1E4A38);
 }
 
 @media (max-width: 480px) {

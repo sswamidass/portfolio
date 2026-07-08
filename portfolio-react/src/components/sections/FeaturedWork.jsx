@@ -7,7 +7,7 @@ const projects = [
     eyebrow: 'GE Healthcare',
     title: 'Designing enterprise UX for the healthcare industry',
     description:
-      'Leading UX design across complex, high-stakes software products for the healthcare industry — from participatory research and card sorting through annotated prototypes, design systems, and stakeholder alignment.',
+      'Leading UX design across complex, high-stakes software products for the healthcare industry, from participatory research and card sorting through annotated prototypes, design systems, and stakeholder alignment.',
     stat: null,
     statLabel: null,
     image: img('/images/ge-work.jpg'),
@@ -20,7 +20,7 @@ const projects = [
     eyebrow: 'Mitsubishi EDM / Laser',
     title: 'Building a machine monitoring platform from zero',
     description:
-      'Designed and built remote360®, a real-time production monitoring web application that replaced a legacy desktop Java tool — owning everything from user research and wireframing to visual design and front-end development.',
+      'Designed and built remote360®, a real-time production monitoring web application that replaced a legacy desktop Java tool, owning everything from user research and wireframing to visual design and front-end development.',
     stat: null,
     statLabel: null,
     image: img('/images/responsive_group.png'),
@@ -33,12 +33,12 @@ const projects = [
     eyebrow: 'Homeground',
     title: 'Brand identity and design system for an artisanal brand',
     description:
-      'Crafted a complete brand identity and design system for Homeground — a nature-inspired, literary artisanal brand built on Shopify — including custom color tokens, typography, botanical illustration language, and a living style guide.',
+      'Crafted a complete brand identity and design system for Homeground, a nature-inspired, literary artisanal brand built on Shopify, including custom color tokens, typography, botanical illustration language, and a living style guide.',
     stat: null,
     statLabel: null,
     image: img('/images/homeground-fall.jpg'),
     imageLogo: img('/images/homeground-logo.png'),
-    imageAlt: 'Homeground brand — autumn landscape',
+    imageAlt: 'Homeground brand, autumn landscape',
     imageRight: true,
     link: null,
     linkLabel: null,

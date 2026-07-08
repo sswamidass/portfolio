@@ -9,9 +9,9 @@
 
 /* ── Column ── */
 .wl-col {
-  max-width: 900px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 40px;
 }
 
 /* ── Main ── */
@@ -54,12 +54,53 @@
 /* ── Cards ── */
 .wl-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 
-@media (max-width: 640px) {
+/* Row 1: GEHC large (3/5) | Homeground smaller (2/5) */
+.wl-cards > *:nth-child(1) { grid-column: span 3; }
+.wl-cards > *:nth-child(2) { grid-column: span 2; }
+
+/* Row 2: Tire Rack smaller (2/5) | remote360 larger (3/5) */
+.wl-cards > *:nth-child(3) { grid-column: span 2; }
+.wl-cards > *:nth-child(4) { grid-column: span 3; }
+
+/* Row 3: K12 full width */
+.wl-cards > *:nth-child(5) { grid-column: span 5; }
+
+/* Media heights per row */
+.wl-cards > *:nth-child(1) .pc-media,
+.wl-cards > *:nth-child(2) .pc-media { height: 440px; }
+
+.wl-cards > *:nth-child(3) .pc-media,
+.wl-cards > *:nth-child(4) .pc-media { height: 400px; }
+
+.wl-cards > *:nth-child(5) .pc-media { height: 320px; }
+
+/* Tablet: 2-column, GEHC full-width */
+@media (max-width: 900px) {
+  .wl-cards { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .wl-cards > *:nth-child(1) { grid-column: span 2; }
+  .wl-cards > *:nth-child(2) { grid-column: span 1; }
+  .wl-cards > *:nth-child(3) { grid-column: span 1; }
+  .wl-cards > *:nth-child(4) { grid-column: span 1; }
+  .wl-cards > *:nth-child(5) { grid-column: span 2; }
+  .wl-cards > *:nth-child(1) .pc-media { height: 340px; }
+  .wl-cards > *:nth-child(2) .pc-media,
+  .wl-cards > *:nth-child(3) .pc-media,
+  .wl-cards > *:nth-child(4) .pc-media { height: 260px; }
+  .wl-cards > *:nth-child(5) .pc-media { height: 240px; }
+}
+
+/* Mobile: single column */
+@media (max-width: 560px) {
   .wl-cards { grid-template-columns: 1fr; gap: 16px; }
+  .wl-cards > *:nth-child(n) { grid-column: span 1; }
+  .wl-cards > *:nth-child(n) .pc-media { height: 240px; }
+  /* remote360 (4th in DOM) appears before Tire Rack (3rd) on mobile */
+  .wl-cards > *:nth-child(3) { order: 4; }
+  .wl-cards > *:nth-child(4) { order: 3; }
 }
 
 /* ── In Progress placeholder ── */

@@ -6,7 +6,7 @@ import './Contact.css'
 
 export default function Contact() {
   useEffect(() => {
-    document.title = 'Contact — Sanjay Swamidass'
+    document.title = 'Contact | Sanjay Swamidass'
     window.scrollTo(0, 0)
   }, [])
 
@@ -15,7 +15,6 @@ export default function Contact() {
       <CaseStudyNav />
       <main className="contact-main">
         <div className="contact-col">
-          <h1 className="contact-heading">Contact.</h1>
           <ul className="contact-links">
             {links.map(link => (
               <li key={link.label} className="contact-link-item">

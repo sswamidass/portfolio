@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="page-container footer-inner">
         <div className="footer-left">
           <p className="footer-name">Sanjay Swamidass</p>
-          <p className="footer-tagline">Senior Product Designer — Chicago, IL</p>
+          <p className="footer-tagline">Senior Product Designer, Chicago, IL</p>
         </div>
         <div className="footer-right">
           <p className="footer-say-hello">Say, "Hello."</p>

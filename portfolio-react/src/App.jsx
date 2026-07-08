@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
 import WorkListingPage from './pages/WorkListingPage'
 import About from './pages/About'
 import GehcCaseStudy from './pages/GehcCaseStudy'
@@ -11,6 +12,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
+    <ThemeProvider>
     <BrowserRouter basename="/portfolio-new">
       <Routes>
         <Route path="/" element={<About />} />
@@ -25,6 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

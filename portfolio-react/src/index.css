@@ -26,6 +26,37 @@
   --font-sans:    var(--cs-font);
   --max-width:    860px;
   --nav-height:   72px;
+
+  /* Nav pill vars */
+  --nav-pill-bg:          rgba(255, 255, 255, 0.55);
+  --nav-pill-border:      rgba(30, 40, 30, 0.10);
+  --nav-indicator-bg:     #fff;
+  --nav-back-color:       #3A3B31;
+  --nav-back-hover-bg:    rgba(255, 255, 255, 0.80);
+  --nav-back-hover-color: #1E4A38;
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] {
+  --cs-paper:       #141414;
+  --cs-surface:     #1F1F1F;
+  --cs-ink:         #EDEDEA;
+  --cs-ink-muted:   #8A8A80;
+  --cs-accent:      #7EB5A0;
+  --cs-accent-soft: #5A9980;
+  --cs-line:        rgba(255, 255, 255, 0.08);
+
+  --color-bg:     var(--cs-paper);
+  --color-text:   var(--cs-ink);
+  --color-muted:  var(--cs-ink-muted);
+  --color-border: rgba(255, 255, 255, 0.10);
+
+  --nav-pill-bg:          rgba(22, 22, 22, 0.82);
+  --nav-pill-border:      rgba(255, 255, 255, 0.10);
+  --nav-indicator-bg:     rgba(50, 50, 50, 0.95);
+  --nav-back-color:       #EDEDEA;
+  --nav-back-hover-bg:    rgba(40, 40, 40, 0.90);
+  --nav-back-hover-color: #7EB5A0;
 }
 
 html, body {
@@ -39,6 +70,7 @@ body {
   color: var(--cs-ink);
   background: var(--cs-paper);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #root {

@@ -27,11 +27,11 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-headline">
-          Hi, I'm Sanjay — Senior Product Designer crafting products people love to use.
+          Hi, I'm Sanjay, a Senior Product Designer crafting products people love to use.
         </h1>
 
         <p className="hero-sub">
-          Experienced in the full design cycle — from research and wireframes to high-fidelity UI and front-end code. Currently at GE Healthcare.
+          Experienced in the full design cycle, from research and wireframes to high-fidelity UI and front-end code. Currently at GE Healthcare.
         </p>
 
         <div className="hero-ctas">

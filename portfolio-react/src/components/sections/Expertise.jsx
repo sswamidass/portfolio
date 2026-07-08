@@ -4,7 +4,7 @@ const areas = [
   {
     title: 'Product Design',
     description:
-      'End-to-end product design — from early-stage concepts and user flows through high-fidelity prototypes that teams can ship with confidence.',
+      'End-to-end product design, from early-stage concepts and user flows through high-fidelity prototypes that teams can ship with confidence.',
     skills: [
       'UX Design',
       'Interaction Design',
@@ -26,7 +26,7 @@ const areas = [
   {
     title: 'Front-End Development',
     description:
-      'Bridging design and engineering — translating designs into pixel-perfect, responsive code that actually behaves the way it looks.',
+      'Bridging design and engineering, translating designs into pixel-perfect, responsive code that actually behaves the way it looks.',
     skills: [
       'HTML5 / CSS / SCSS',
       'JavaScript & React',
@@ -37,7 +37,7 @@ const areas = [
   {
     title: 'UX Research & Strategy',
     description:
-      'Grounding design decisions in real user insight — from participatory workshops and interviews to synthesized findings that drive product direction.',
+      'Grounding design decisions in real user insight, from participatory workshops and interviews to synthesized findings that drive product direction.',
     skills: [
       'User Interviews',
       'Participatory Design',
@@ -56,7 +56,7 @@ export default function Expertise() {
             <span className="heading-meta expertise-meta">My Strengths</span>
             <h2 className="portfolio-heading expertise-heading">My Areas of Expertise</h2>
             <p className="expertise-sub">
-              The full design cycle — research, strategy, and execution — backed by the technical depth to see it through to production.
+              The full design cycle: research, strategy, and execution, backed by the technical depth to see it through to production.
             </p>
           </AnimateBox>
         </div>

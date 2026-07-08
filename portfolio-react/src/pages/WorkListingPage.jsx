@@ -10,7 +10,7 @@ export default function WorkListingPage() {
   const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
-    document.title = 'Work — Sanjay Swamidass'
+    document.title = 'Work | Sanjay Swamidass'
     window.scrollTo(0, 0)
   }, [])
 
@@ -23,9 +23,6 @@ export default function WorkListingPage() {
 
           {/* Selected Work */}
           <section className="wl-section">
-            <header className="wl-section-head">
-              <h2 className="wl-section-heading">Selected Work.</h2>
-            </header>
             <div className="wl-cards">
               {workItems.map(item => (
                 <ProjectCard
@@ -40,6 +37,8 @@ export default function WorkListingPage() {
                   gated={item.gated}
                   onGatedClick={item.gated ? () => setShowModal(true) : undefined}
                   media={item.cardMedia}
+                  mediaPosition={item.cardMediaPosition}
+                  mediaPull={item.cardMediaPull}
                 />
               ))}
             </div>

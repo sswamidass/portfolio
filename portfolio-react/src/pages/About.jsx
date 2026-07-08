@@ -17,7 +17,7 @@ const values = [
   {
     icon: '🚗',
     heading: 'Tech and car enthusiast.',
-    body: "If it has a screen or an engine, I'm probably interested. I love following the intersection of technology and automotive design — two spaces where good UX really matters.",
+    body: "If it has a screen or an engine, I'm probably interested. I love following the intersection of technology and automotive design, two spaces where good UX really matters.",
   },
   {
     icon: '☕',
@@ -32,13 +32,13 @@ const values = [
   {
     icon: '🎨',
     heading: 'Design is a craft.',
-    body: "I believe the best work comes from understanding people deeply — their context, their frustrations, and what they're really trying to do.",
+    body: "I believe the best work comes from understanding people deeply: their context, their frustrations, and what they're really trying to do.",
   },
 ]
 
 export default function About() {
   useEffect(() => {
-    document.title = 'Sanjay Swamidass — Product Designer'
+    document.title = 'Sanjay Swamidass | Product Designer'
     window.scrollTo(0, 0)
   }, [])
 
@@ -53,7 +53,7 @@ export default function About() {
             <img src={img('/images/about.jpg')} alt="Sanjay Swamidass" className="about-photo" />
             <div>
               <p className="about-bio">
-                I'm a Senior Product Designer with 14+ years of experience, currently leading interaction design at GE HealthCare. I design for complexity — healthcare systems, industrial tools, e-commerce — and believe the best interfaces are the ones that get out of the way.
+                I'm a Senior Product Designer with 14+ years of experience, currently leading interaction design at GE HealthCare. I design for complexity: healthcare systems, industrial tools, e-commerce. I believe the best interfaces are the ones that get out of the way.
               </p>
               <p className="about-bio">
                 Outside of work, I co-founded Homeground with my partner Sara, a Great Lakes coffee and kids' book subscription box built on the same principle: good things, thoughtfully made. I live in Chicago, and when I'm not designing, I'm probably tending a sourdough starter or dialing in a pour-over.
