@@ -96,6 +96,11 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
                     {it.images.map((src, k) => <img key={k} src={src} alt="" />)}
                   </div>
                 )}
+                {it.list && (
+                  <ul className="cs-section-list">
+                    {it.list.map((item, k) => <li key={k}>{item}</li>)}
+                  </ul>
+                )}
                 {it.links && (
                   <ul className="cs-section-links">
                     {it.links.map((l, k) => (
