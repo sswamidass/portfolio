@@ -4,7 +4,7 @@ import CaseStudyNav from './CaseStudyNav'
 import CaseStudyFooter from './CaseStudyFooter'
 import './CaseStudyTemplate.css'
 
-export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false, dark = false }) {
+export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false, dark = false, logoStyle }) {
   useEffect(() => {
     document.title = `${item.company} | Sanjay Swamidass`
     window.scrollTo(0, 0)
@@ -22,6 +22,7 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
               src={item.logo}
               alt={item.company}
               className={`cs-page-logo${logoOnly ? ' cs-page-logo--color' : ''}`}
+              style={logoStyle}
             />
           )}
           {!logoOnly && (
