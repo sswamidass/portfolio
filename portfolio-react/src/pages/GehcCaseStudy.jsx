@@ -5,7 +5,7 @@ const item = workItems.find(w => w.id === 'gehc')
 
 const intro = [
   'MRI technologists make hundreds of decisions during every exam. They manage patient safety, configure imaging protocols, monitor scan progress, and review images — all while working under constant time pressure. Concerto is the software that powers that experience.',
-  'As a UX Designer on GE HealthCare\'s MRI team, I design workflows that help expert users navigate this complexity without sacrificing the precision and flexibility modern MRI requires.',
+  'I lead interaction design on GE HealthCare\'s MRI team, building workflows that help expert users get through that complexity without giving up the precision and flexibility MRI demands.',
 ]
 
 const sections = [
@@ -29,7 +29,7 @@ const sections = [
     items: [
       {
         heading: 'Learning how MRI technologists think',
-        body: 'Designing for MRI required more than understanding software — it required understanding the clinical workflow.',
+        body: 'Designing for MRI meant learning the clinical workflow, not just the software.',
       },
       {
         body: 'I partnered closely with MRI application specialists, observed demonstrations, reviewed existing workflows, and translated complex technical concepts into user-centered design decisions. Rather than treating each screen independently, I focused on how technologists move through an entire exam — from patient setup to image acquisition and post-processing.',
@@ -38,7 +38,7 @@ const sections = [
         callout: 'Technologists rarely work sequentially. While one scan is running, they\'re already preparing the next one. The interface needed to support parallel work instead of forcing linear interactions.',
       },
       {
-        body: 'Every design decision was evaluated against that reality.',
+        body: 'That shaped every layout decision.',
       },
     ],
   },
@@ -47,13 +47,13 @@ const sections = [
     items: [
       {
         heading: 'Designing within a highly technical ecosystem',
-        body: 'As a UX Designer on the MRI software team, I contributed interaction design, information architecture, wireframes, high-fidelity UI, prototypes, and design specifications for Concerto\'s scanning experience.',
+        body: 'On the MRI software team I owned interaction design, information architecture, wireframes, high-fidelity UI, prototypes, and design specs for Concerto\'s scanning experience.',
       },
       {
         body: 'Working within a multidisciplinary team of product managers, engineers, and MRI domain experts, I translated highly technical requirements into workflows that balanced efficiency, discoverability, and patient safety.',
       },
       {
-        body: 'Much of my work involved reducing cognitive load without removing the flexibility expert users depend on.',
+        body: 'Most of the job was cutting cognitive load without taking away the flexibility expert users rely on.',
       },
     ],
   },
@@ -62,7 +62,7 @@ const sections = [
     items: [
       {
         heading: 'Understanding complexity before simplifying it',
-        body: 'MRI software contains hundreds of configurable parameters, many of which directly affect image quality or patient safety. Before proposing solutions, I invested time understanding why these controls existed and how technologists actually used them during live exams.',
+        body: 'MRI software contains hundreds of configurable parameters, many of which directly affect image quality or patient safety. Before proposing anything, I spent time learning why each control existed and how technologists used it during live exams.',
       },
       {
         body: 'Working sessions with MRI specialists revealed recurring usability challenges:',
@@ -74,7 +74,7 @@ const sections = [
         ],
       },
       {
-        body: 'These insights became the foundation for every design decision moving forward.',
+        body: 'Those four problems drove the rest of the work.',
       },
     ],
   },
@@ -83,7 +83,7 @@ const sections = [
     items: [
       {
         heading: 'Reducing cognitive load without reducing capability',
-        body: 'Rather than redesigning the interface around aesthetics, I focused on helping technologists make faster, more confident decisions.',
+        body: 'I wasn\'t there to make it prettier. The goal was helping technologists decide faster, with more confidence.',
       },
       {
         body: 'This included designing workflows that:',
@@ -96,7 +96,7 @@ const sections = [
         ],
       },
       {
-        body: 'Every interaction was evaluated through the lens of efficiency, safety, and expert usability.',
+        body: 'Each one had to earn its place on efficiency, safety, and how an expert would use it.',
       },
     ],
   },
@@ -105,7 +105,7 @@ const sections = [
     items: [
       {
         heading: 'Designing for clarity in high-pressure environments',
-        body: "Concerto's interface is information-dense by necessity. My goal wasn't to reduce information — it was to improve how that information was organized and prioritized.",
+        body: "Concerto's interface is dense because it has to be. I wasn't trying to show less; I was trying to organize and prioritize what was already there.",
       },
       {
         body: 'I refined layouts, hierarchy, spacing, iconography, and visual states to make important actions easier to recognize while reducing unnecessary visual noise.',
@@ -122,7 +122,7 @@ const sections = [
         ],
       },
       {
-        body: 'The result was an interface that felt more intentional and easier to navigate while preserving the depth required by advanced MRI workflows.',
+        body: 'The result is easier to navigate and reads as deliberate, and it kept all the depth advanced MRI work needs.',
       },
     ],
   },
@@ -131,13 +131,13 @@ const sections = [
     items: [
       {
         heading: 'Designing alongside clinical experts',
-        body: 'Every workflow was shaped through close collaboration with MRI application specialists, product managers, and engineers.',
+        body: 'Every workflow went through MRI application specialists, product managers, and engineers before it shipped.',
       },
       {
         body: 'Clinical experts provided the domain knowledge behind each feature, while engineering ensured proposed interactions aligned with technical constraints. My responsibility was translating those requirements into intuitive experiences that supported both novice and experienced technologists.',
       },
       {
-        body: 'This iterative collaboration ensured designs reflected real clinical practice rather than assumptions.',
+        body: 'Going back and forth like that kept the designs tied to how MRI is practiced, not how we assumed it was.',
       },
     ],
   },
@@ -149,10 +149,10 @@ const sections = [
         body: "The work contributed to the ongoing evolution of Concerto's MRI scanning experience, helping modernize workflows used throughout patient setup, protocol management, scan configuration, image acquisition, and review.",
       },
       {
-        body: 'By focusing on workflow efficiency and cognitive clarity, the designs supported faster navigation, improved system feedback, and more intuitive interaction patterns without sacrificing the advanced capabilities required by expert users.',
+        body: 'Navigation got faster, system feedback got clearer, and the interaction patterns got more predictable, without losing the advanced capability expert users need.',
       },
       {
-        callout: "In healthcare, simplicity isn't about removing features — it's about helping experts make better decisions under pressure.",
+        callout: "In healthcare, simplicity means helping experts make better decisions under pressure, not taking features away.",
       },
     ],
   },
@@ -160,13 +160,13 @@ const sections = [
     label: 'Reflection',
     items: [
       {
-        body: 'Working on Concerto fundamentally changed how I think about enterprise UX.',
+        body: 'Concerto changed how I think about enterprise UX.',
       },
       {
-        body: "The challenge wasn't simplifying MRI — it was making one of healthcare's most sophisticated workflows feel manageable without compromising precision or safety. Every interaction had real-world implications for clinicians and patients alike.",
+        body: "The challenge was never to simplify MRI. It was to make one of the most sophisticated workflows in healthcare feel manageable without compromising precision or safety, knowing every interaction had consequences for clinicians and patients.",
       },
       {
-        body: "Designing in that environment taught me that great enterprise software doesn't hide complexity. It organizes it, prioritizes it, and helps people focus on what matters most.",
+        body: "Good enterprise software doesn't hide complexity. It organizes it, sets priorities, and gets out of the way so people can focus.",
       },
     ],
   },

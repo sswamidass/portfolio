@@ -6,7 +6,7 @@ export const workItems = [
     company: 'GE HealthCare',
     caseStudyTitle: 'Concerto',
     caseStudySubtitle: 'MRI Scanning Experience',
-    role: 'UX Designer',
+    role: 'Sr. IxD & UX Lead',
     duration: '2021 – Present',
     tools: 'Interaction Design, Information Architecture, Prototyping, UI Design',
     team: 'Product, Engineering, MRI Clinical Specialists',
