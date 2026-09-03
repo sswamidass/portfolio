@@ -1,3 +1,33 @@
+# Dependencies / build output
+node_modules
+dist
+dist-ssr
+
+# Env & local overrides (VITE_GEHC_PASSWORD lives in .env)
+.env
+.env.*
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
 # Claude Code tooling
 .claude/
 
@@ -7,9 +37,5 @@ _bmad/
 # Internal planning docs
 docs/
 
-# Node modules
-node_modules/
-
-# Legacy static-site build cache / macOS cruft
+# Legacy static-site build cache
 .sass-cache/
-.DS_Store
