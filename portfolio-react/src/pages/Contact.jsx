@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import CaseStudyNav from '../components/CaseStudyNav'
+import CaseStudyFooter from '../components/CaseStudyFooter'
 import { contactLinks as links } from '../data/contact'
 import './Contact.css'
 
@@ -14,6 +15,10 @@ export default function Contact() {
       <CaseStudyNav />
       <main className="contact-main">
         <div className="contact-col">
+          <h1 className="contact-heading">Say hello.</h1>
+          <p className="contact-intro">
+            I'm in Chicago, leading interaction design at GE HealthCare. Reach out about product design work, or if you'd like a walkthrough of the password-protected case study.
+          </p>
           <ul className="contact-links">
             {links.map(link => (
               <li key={link.label} className="contact-link-item">
@@ -31,6 +36,7 @@ export default function Contact() {
           </ul>
         </div>
       </main>
+      <CaseStudyFooter compact />
     </div>
   )
 }

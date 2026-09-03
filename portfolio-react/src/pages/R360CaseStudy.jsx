@@ -5,8 +5,8 @@ import { workItems } from '../data/work'
 const item = workItems.find(w => w.id === 'remote360')
 
 const intro = [
-  'remote360® gives operators and service teams in the machining and fabrication industry real-time visibility into machine performance, from any device, anywhere. Live data, maintenance metrics, productivity dashboards. The kind of tool that turns a floor manager\'s instinct into something measurable.',
-  'When I joined MC Machinery, remote360 existed only as a proof of concept. I rebuilt it from the ground up, owning research, UX, visual design, and front-end development. Six years, one designer, one product.',
+  'remote360® gives operators and service teams in the machining and fabrication industry real-time visibility into machine performance, from any device, anywhere. Live data, maintenance metrics, productivity dashboards. It gives a floor manager numbers instead of a gut feeling.',
+  'When I joined MC Machinery (Mitsubishi EDM/Laser), remote360 existed only as a proof of concept. I rebuilt it from the ground up, owning research, UX, visual design, and front-end development.',
 ]
 
 const sections = [
@@ -15,13 +15,13 @@ const sections = [
     items: [
       {
         heading: 'A concept that needed a product',
-        body: 'The original remote360 was a Java desktop application built by an IoT partner. It proved the data infrastructure worked, but the experience didn\'t. Customers wanted real-time visibility on the go. What they got was a clunky, desktop-only interface that felt like it had been configured, not designed.',
+        body: 'The original remote360 was a Java desktop application built by an IoT partner. It proved the data infrastructure worked, but the experience didn\'t. Customers wanted real-time visibility on the go. What they had was a clunky desktop app that looked like nobody had designed it.',
       },
       {
         image: img('/images/ignition.png'),
       },
       {
-        body: 'The IoT partner\'s strength was plumbing: sensors, data pipelines, infrastructure. Design was outside their scope. My role was to take ownership of everything the data touched: how it was organized, how it looked, and how it felt to use. I was the first and only designer on the project.',
+        body: 'The IoT partner was good at the plumbing (sensors, pipelines, infrastructure) and didn\'t do design. My role was to take ownership of everything the data touched: how it was organized, how it looked, and how it felt to use. I was the first and only designer on the project.',
       },
     ],
   },
@@ -52,7 +52,7 @@ const sections = [
         callout: 'Six years. One designer. One product.',
       },
       {
-        body: 'Working alone across design and development meant no translation loss between intent and execution. When I made a decision at the whiteboard, I was the one building it. That accountability changed how I made decisions.',
+        body: 'Doing both the design and the build meant nothing got lost in handoff. If I sketched something on the whiteboard, I was the one who had to make it work, which made me more careful about what I sketched.',
       },
     ],
   },
@@ -65,7 +65,7 @@ const sections = [
         image: img('/images/ia.jpg'),
       },
       {
-        body: 'I structured the information architecture around access speed. Every navigation decision was evaluated against a single question: how quickly can someone get the answer they came for?',
+        body: 'I structured the information architecture around access speed. Every navigation decision came down to one question: how fast can someone get the answer they came for?',
         image: img('/images/wireframes.jpg'),
       },
     ],
@@ -75,7 +75,7 @@ const sections = [
     items: [
       {
         heading: 'Dark by design',
-        body: 'I tested three visual directions with technicians, product managers, and leadership. The dark interface won decisively. It felt native to the industrial context, reduced eye strain under harsh lighting, and gave the product a sharp identity that set it apart from generic enterprise software.',
+        body: 'I tested three visual directions with technicians, product managers, and leadership. The dark one won, and it wasn\'t close. It felt native to the industrial context, reduced eye strain under harsh lighting, and gave the product a sharp identity that set it apart from generic enterprise software.',
         image: img('/images/mockups.jpg'),
       },
       {
@@ -89,7 +89,7 @@ const sections = [
     items: [
       {
         heading: 'Designing and building it myself',
-        body: 'I built the front end in HTML5, SCSS, and JavaScript, integrating with PHP and MySQL for data. Owning both sides of the work meant I could make real-time calls at the edge of what was designed and what was buildable, without the friction of handoff. The app launched mobile-first and was tested across screen sizes throughout, not as an afterthought.',
+        body: 'I built the front end in HTML5, SCSS, and JavaScript, integrating with PHP and MySQL for data. Owning both sides of the work meant I could make real-time calls at the edge of what was designed and what was buildable, without the friction of handoff. The app launched mobile-first, and I tested it across screen sizes the whole way through.',
       },
     ],
   },
@@ -105,9 +105,8 @@ const sections = [
         body: 'The work got noticed beyond the company:',
         links: [
           { label: 'Data-Driven Manufacturing, Canadian Fabricating & Welding', url: 'https://www.canadianmetalworking.com/canadianfabricatingandwelding/article/fabricating/data-driven-manufacturing' },
-          { label: '#1 in EDM Sales, Support and Innovation, MC Machinery', url: 'https://s3-us-west-1.amazonaws.com/mcmachinery-uploads/uploads/diamonds/CoverStory_Spring19_r2.pdf' },
-          { label: 'Machine Monitoring Optimizes Operations, MC Machinery Blog', url: 'https://www.mcmachinery.com/blog/customer-story-principal-manufacturing/' },
-          { label: 'remote360: monitoreo remoto de servicio y soporte, Metal Mecánica', url: 'http://www.metalmecanica.com/temas/Remote-360,-monitoreo-remoto-de-servicio-y-soporte+125577' },
+          { label: '#1 in EDM Sales, Support and Innovation, MC Machinery', url: 'https://web.archive.org/web/20240629053427/http://s3-us-west-1.amazonaws.com/mcmachinery-uploads/uploads/diamonds/CoverStory_Spring19_r2.pdf' },
+          { label: 'Machine Monitoring Optimizes Operations, MC Machinery Blog', url: 'https://web.archive.org/web/20191112092608/https://www.mcmachinery.com/blog/customer-story-principal-manufacturing/' },
           { label: 'Remote Monitoring to Make Better Decisions, Canadian Metalworking', url: 'https://www.canadianmetalworking-digital.com/canadianmetalworking/202011/MobilePagedReplica.action?pm=2&folio=FW30#pg76' },
         ],
       },
@@ -118,12 +117,12 @@ const sections = [
         image: img('/images/final_group.jpg'),
       },
       {
-        body: 'remote360 taught me what it actually means to own a product. When you\'re the researcher, the designer, and the engineer, every decision is yours to live with. That kind of accountability doesn\'t leave you.',
+        body: 'remote360 is where I learned what owning a product means. When you\'re the researcher, the designer, and the engineer, every decision is yours to live with. I still work that way.',
       },
     ],
   },
 ]
 
 export default function R360CaseStudy() {
-  return <CaseStudyTemplate item={item} intro={intro} sections={sections} logoOnly dark />
+  return <CaseStudyTemplate item={item} intro={intro} sections={sections} dark hideTitle />
 }

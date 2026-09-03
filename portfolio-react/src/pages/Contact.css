@@ -24,7 +24,15 @@
   color: var(--cs-accent);
   letter-spacing: -0.04em;
   line-height: 1;
-  margin: 0 0 72px;
+  margin: 0 0 28px;
+}
+
+.contact-intro {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--cs-ink-muted);
+  max-width: 540px;
+  margin: 0 0 64px;
 }
 
 /* ── Link rows ── */
@@ -92,7 +100,8 @@
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .contact-col { padding: 0 20px; }
-  .contact-heading { margin-bottom: 48px; }
+  .contact-heading { margin-bottom: 20px; }
+  .contact-intro { margin-bottom: 44px; }
   .contact-link { padding: 22px 0; }
   .contact-link-value { font-size: 1rem; }
 }

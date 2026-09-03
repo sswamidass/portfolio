@@ -1,5 +1,5 @@
 import { contactLinks } from '../data/contact'
-import { useTheme } from '../context/ThemeContext'
+import { useTheme } from '../context/useTheme'
 import './CaseStudyFooter.css'
 
 function SunIcon() {
@@ -29,12 +29,14 @@ function MoonIcon() {
   )
 }
 
-export default function CaseStudyFooter() {
+// `compact` drops the contact rows — for pages that already list them (Contact).
+export default function CaseStudyFooter({ compact = false }) {
   const { theme, toggle } = useTheme()
 
   return (
     <footer className="csf">
       <div className="csf-inner">
+        {!compact && (
         <div className="csf-top">
           <div className="csf-links">
             {contactLinks.map(link => (
@@ -50,6 +52,7 @@ export default function CaseStudyFooter() {
             ))}
           </div>
         </div>
+        )}
         <div className="csf-bottom">
           <span>Senior Product Designer, Chicago, IL</span>
           <button

@@ -20,6 +20,7 @@ export default function WorkListingPage() {
 
       <main className="wl-main">
         <div className="wl-col">
+          <h1 className="sr-only">Work</h1>
 
           {/* Selected Work */}
           <section className="wl-section">
@@ -48,7 +49,7 @@ export default function WorkListingPage() {
           <section className="wl-section">
             <div className="wl-placeholder">
               <div className="wl-placeholder-inner">
-                <p className="wl-more-heading">A few favorites from 10+ years of work.</p>
+                <p className="wl-more-heading">A few favorites from 14+ years of work.</p>
                 <p className="wl-more-sub">Healthcare, retail, education, consumer brands, and more. Additional work available on request.</p>
               </div>
             </div>

@@ -76,7 +76,7 @@
 .wl-cards > *:nth-child(3) .pc-media,
 .wl-cards > *:nth-child(4) .pc-media { height: 400px; }
 
-.wl-cards > *:nth-child(5) .pc-media { height: 320px; }
+.wl-cards > *:nth-child(5) .pc-media { height: 420px; }
 
 /* Tablet: 2-column, GEHC full-width */
 @media (max-width: 900px) {

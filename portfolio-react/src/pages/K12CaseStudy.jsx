@@ -15,7 +15,7 @@ const sections = [
     items: [
       {
         heading: 'A site that buried its own message',
-        body: 'The existing site was dense. Landing pages were overloaded with information, and first-time visitors struggled to understand what Elevate K-12 actually did, let alone why it mattered. The experience felt like reading a brochure, not discovering a solution.',
+        body: 'The existing site was dense. Landing pages were overloaded with information, and first-time visitors struggled to understand what Elevate K-12 actually did, let alone why it mattered. It read like a brochure.',
         image: img('/images/old-k12.png'),
       },
       {
@@ -28,7 +28,7 @@ const sections = [
     items: [
       {
         heading: 'Decision-makers with a short window',
-        body: 'The primary audience was school administrators and district leaders, people evaluating whether a remote teaching platform could solve a real staffing crisis. They weren\'t casual browsers. They came with a specific problem and limited attention. The redesign needed to meet them there: give them clarity fast, and make a compelling case for why Elevate K-12 was the right answer.',
+        body: 'The primary audience was school administrators and district leaders, people evaluating whether a remote teaching platform could solve a real staffing crisis. They weren\'t browsing. They had a specific problem and not much time, so the site had to explain itself fast and make the case for Elevate K-12 without a lot of scrolling.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const sections = [
     items: [
       {
         heading: 'Making space for the mission',
-        body: 'I kept the brand\'s primary green and secondary purple but shifted how they were used, moving from large, dominant color blocks to intentional accent moments. The result felt more modern and gave the content room to breathe. Clean typography and generous white space did the heavy lifting.',
+        body: 'I kept the brand\'s primary green and secondary purple but shifted how they were used, moving from large, dominant color blocks to intentional accent moments. The result felt more modern and gave the content room to breathe. Clean type and a lot of white space did most of the work.',
         images: [img('/images/ui-k12.png'), img('/images/k12_flow.png')],
       },
     ],
@@ -70,7 +70,7 @@ const sections = [
     items: [
       {
         heading: 'On time, on brief',
-        body: 'The redesign shipped on schedule. Development was handled by the company\'s internal team from my handoff files. The new design gave Elevate K-12 a cleaner, more credible presence, one that reflected the professionalism of their mission and made it far easier for prospective clients to understand their offering at a glance.',
+        body: 'The redesign shipped on schedule. Development was handled by the company\'s internal team from my handoff files. The new site looked more credible, matched the seriousness of what they do, and made it much easier for a district to understand the offer at a glance.',
         image: img('/images/final_k12.jpg'),
       },
     ],
@@ -78,5 +78,5 @@ const sections = [
 ]
 
 export default function K12CaseStudy() {
-  return <CaseStudyTemplate item={item} intro={intro} sections={sections} logoOnly />
+  return <CaseStudyTemplate item={item} intro={intro} sections={sections} hideTitle />
 }

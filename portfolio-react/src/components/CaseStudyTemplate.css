@@ -57,6 +57,9 @@
 .cs-page-logo--color {
   filter: none;
   opacity: 1;
+  height: 48px;
+  max-width: 220px;
+  margin-bottom: 44px;
 }
 
 .cs-page-title {
@@ -67,6 +70,17 @@
   letter-spacing: -0.04em;
   line-height: 0.95;
   margin: 0 0 52px;
+}
+
+.cs-page-title:has(+ .cs-page-subtitle) {
+  margin-bottom: 18px;
+}
+
+.cs-page-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--cs-ink-muted);
+  margin: 0 0 48px;
 }
 
 .cs-page-meta {
@@ -284,6 +298,25 @@
   .cs-page-title { margin-bottom: 36px; letter-spacing: -0.03em; }
   .cs-page-meta { gap: 24px 32px; }
   .cs-sections { padding-top: 64px; }
+}
+
+/* ── Follow the global theme toggle. remote360 opts out via .cs-page--dark
+      because its dark palette is part of the product story. ── */
+[data-theme="dark"] .cs-page:not(.cs-page--dark) {
+  --cs-paper:       #141414;
+  --cs-surface:     #1f1f1f;
+  --cs-ink:         #EDEBE6;
+  --cs-ink-muted:   rgba(237, 235, 230, 0.55);
+  --cs-accent:      #EDEBE6;
+  --cs-accent-soft: rgba(237, 235, 230, 0.75);
+  --cs-line:        rgba(255, 255, 255, 0.08);
+
+  --nav-pill-bg:          rgba(22, 22, 22, 0.82);
+  --nav-pill-border:      rgba(255, 255, 255, 0.10);
+  --nav-indicator-bg:     rgba(50, 50, 50, 0.95);
+  --nav-back-color:       #EDEDEA;
+  --nav-back-hover-bg:    rgba(40, 40, 40, 0.90);
+  --nav-back-hover-color: #EDEBE6;
 }
 
 /* ── Dark theme (remote360) ── */

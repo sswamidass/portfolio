@@ -4,7 +4,8 @@ import CaseStudyNav from './CaseStudyNav'
 import CaseStudyFooter from './CaseStudyFooter'
 import './CaseStudyTemplate.css'
 
-export default function CaseStudyTemplate({ item, intro, introPhoto, sections, logoOnly = false, dark = false, logoStyle }) {
+// `hideTitle` keeps the meta row but drops the display title and shows the logo in color
+export default function CaseStudyTemplate({ item, intro, introPhoto, sections, dark = false, hideTitle = false }) {
   useEffect(() => {
     document.title = `${item.company} | Sanjay Swamidass`
     window.scrollTo(0, 0)
@@ -21,15 +22,15 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
             <img
               src={item.logo}
               alt={item.company}
-              className={`cs-page-logo${logoOnly ? ' cs-page-logo--color' : ''}`}
-              style={logoStyle}
+              className={`cs-page-logo${hideTitle ? ' cs-page-logo--color' : ''}`}
             />
           )}
-          {!logoOnly && (
-            <>
-              <h1 className="cs-page-title">
-                {item.caseStudyTitle || item.company}.
+              <h1 className={hideTitle ? 'sr-only' : 'cs-page-title'}>
+                {item.caseStudyTitle || item.company}{hideTitle ? '' : '.'}
               </h1>
+              {item.caseStudySubtitle && (
+                <p className="cs-page-subtitle">{item.caseStudySubtitle}</p>
+              )}
               <div className="cs-page-meta">
                 {item.role && (
                   <div className="cs-page-meta-item">
@@ -56,8 +57,6 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
                   </div>
                 )}
               </div>
-            </>
-          )}
         </div>
       </div>
 
@@ -86,7 +85,7 @@ export default function CaseStudyTemplate({ item, intro, introPhoto, sections, l
             <p className="cs-eyebrow">{section.label}</p>
             {section.items.map((it, j) => (
               <div key={j} className="cs-section-item">
-                {it.heading && <h3 className="cs-section-heading">{it.heading}</h3>}
+                {it.heading && <h2 className="cs-section-heading">{it.heading}</h2>}
                 {it.body && <p className="cs-body-text">{it.body}</p>}
                 {it.callout && <blockquote className="cs-callout">{it.callout}</blockquote>}
                 {it.image && (

@@ -7,38 +7,37 @@ import './About.css'
 const experience = [
   { role: 'Sr. IxD & UX Lead', company: 'GE HealthCare', years: '2021 – Present' },
   { role: 'Co-Founder', company: 'Homeground', years: '2025 – Present' },
-  { role: 'UI/UX Engineer', company: 'Mitsubishi EDM/Laser', years: '2015 – 2021' },
+  { role: 'UI/UX Engineer', company: 'Mitsubishi EDM/Laser', years: '2018 – 2021' },
+  { role: 'UI/UX Designer', company: 'Mitsubishi EDM/Laser', years: '2015 – 2018' },
   { role: 'Web Designer', company: 'Tire Rack', years: '2012 – 2015' },
-  { role: 'Web Designer', company: 'Andrews University', years: '2011 – 2012' },
-  { role: 'Web Designer', company: 'Simple Updates', years: '2010 – 2011' },
 ]
 
 const values = [
   {
     icon: '🚗',
     heading: 'Tech and car enthusiast.',
-    body: "If it has a screen or an engine, I'm probably interested. I love following the intersection of technology and automotive design, two spaces where good UX really matters.",
+    body: "If it has a screen or an engine, I'm interested. I read too much about cars and gadgets, and I have opinions about the software in both.",
   },
   {
     icon: '☕',
     heading: 'Coffee obsessive.',
-    body: 'Dial it in or go home. Homeground started as an excuse to drink better coffee and share it with people who care.',
+    body: "I weigh the beans and time the pour, and I'm not sorry about it. Homeground started, honestly, as an excuse to find better coffee and get it into more kitchens.",
   },
   {
     icon: '📦',
     heading: 'Co-founder, Homeground.',
-    body: "Homeground is a Midwest-themed seasonal subscription box that pairs curated books with small-batch, Midwest-roasted coffee, built around literacy, slow living, and intentionally sourced craft. I co-founded it with my partner Sara, leading the brand and product experience from storefront and visual identity to the unboxing moment and seasonal voice.",
+    body: "Homeground is a Midwest-themed seasonal subscription box that pairs curated books with small-batch, Midwest-roasted coffee, built around reading together and slowing down. Sara runs curation and operations; I do everything a customer sees, from the brand and the store to the emails and the cards in the box.",
   },
   {
     icon: '🎨',
     heading: 'Design is a craft.',
-    body: "I believe the best work comes from understanding people deeply: their context, their frustrations, and what they're really trying to do.",
+    body: "The best work I've done came from spending time with the people using the thing: what they're dealing with, what annoys them, what they're trying to get done.",
   },
 ]
 
 export default function About() {
   useEffect(() => {
-    document.title = 'Sanjay Swamidass | Product Designer'
+    document.title = 'Sanjay Swamidass | Senior Product Designer'
     window.scrollTo(0, 0)
   }, [])
 
@@ -56,7 +55,7 @@ export default function About() {
                 I'm a Senior Product Designer with 14+ years of experience, currently leading interaction design at GE HealthCare. I design for complexity: healthcare systems, industrial tools, e-commerce. I believe the best interfaces are the ones that get out of the way.
               </p>
               <p className="about-bio">
-                Outside of work, I co-founded Homeground with my partner Sara, a Great Lakes coffee and kids' book subscription box built on the same principle: good things, thoughtfully made. I live in Chicago, and when I'm not designing, I'm probably tending a sourdough starter or dialing in a pour-over.
+                Outside of work, I co-founded Homeground with my wife Sara, a Midwest-themed subscription box pairing kids' books with small-batch, Midwest-roasted coffee. I live in Chicago, and when I'm not designing, I'm probably tending a sourdough starter or dialing in a pour-over.
               </p>
             </div>
           </div>
@@ -73,7 +72,7 @@ export default function About() {
                 ))}
               </ul>
               <a href={img('/sswamidass_resume.pdf')} target="_blank" rel="noopener noreferrer" className="about-resume-link">
-                Download full résumé ↓
+                Download full resume ↓
               </a>
             </section>
 

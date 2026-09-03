@@ -24,7 +24,7 @@ export default function PasswordModal({ onClose }) {
         <button className="modal-close" onClick={onClose} aria-label="Close">×</button>
         <h2 className="modal-heading">This case study is password protected.</h2>
         <p className="modal-body">
-          This work is protected by NDA, not because it isn't worth sharing, but because the people and systems involved deserve that care. If you're a recruiter, hiring manager, or fellow designer, I'm happy to walk you through it directly.
+          This one's under NDA, so it's behind a password. If you're hiring, or just curious, email me and I'll walk you through it.
         </p>
         <form onSubmit={handleSubmit} className="modal-form">
           <input
@@ -38,7 +38,7 @@ export default function PasswordModal({ onClose }) {
           {error && (
             <p className="modal-error">
               Incorrect password. Need access?{' '}
-              <a href="mailto:swamidass.sanjay@gmail.com?subject=GEHC%20Case%20Study%20Access">Request it below.</a>
+              <a href="mailto:swamidass.sanjay@gmail.com?subject=GEHC%20Case%20Study%20Access">Email me.</a>
             </p>
           )}
           <button type="submit" className="modal-submit">View case study</button>
