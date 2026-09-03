@@ -34,8 +34,5 @@ lerna-debug.log*
 # BMad framework
 _bmad/
 
-# Internal planning docs
-docs/
-
 # Legacy static-site build cache
 .sass-cache/
