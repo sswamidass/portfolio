@@ -27,7 +27,7 @@
           var decoded = search.slice(3).replace(/~and~/g, '&');
           var query = decoded.indexOf('&q=') !== -1 ? '?' + decoded.split('&q=')[1] : '';
           var path = decoded.split('&q=')[0];
-          history.replaceState(null, null, '/portfolio-new' + path + query + window.location.hash);
+          history.replaceState(null, null, '/portfolio' + path + query + window.location.hash);
         }
       })();
     </script>

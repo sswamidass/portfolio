@@ -13,7 +13,7 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <ThemeProvider>
-    <BrowserRouter basename="/portfolio-new">
+    <BrowserRouter basename="/portfolio">
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/work" element={<WorkListingPage />} />
