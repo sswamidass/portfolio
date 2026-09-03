@@ -9,3 +9,7 @@ docs/
 
 # Node modules
 node_modules/
+
+# Legacy static-site build cache / macOS cruft
+.sass-cache/
+.DS_Store
