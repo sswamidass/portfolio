@@ -125,7 +125,7 @@
   padding: 72px 0 96px;
 }
 .hg-cs__lede-lead {
-  font-size: 25px;
+  font-size: clamp(21px, 4.2vw + 6px, 25px);
   line-height: 1.55;
   letter-spacing: -0.01em;
   color: var(--hg-shell-heading);
@@ -158,7 +158,7 @@
 }
 .hg-cs__heading {
   font-family: var(--hg-font-body);
-  font-size: 27px;
+  font-size: clamp(22px, 4.4vw + 6px, 27px);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.015em;
@@ -183,6 +183,8 @@
   display: flex;
   flex-direction: column;
   gap: 11px;
+  min-width: 0;
+  container-type: inline-size;
 }
 
 /* ---- Back link ---- */
@@ -212,6 +214,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 0;
+  container-type: inline-size;
 }
 .hg-brandcard__tick {
   position: absolute;
@@ -403,6 +407,7 @@
   color: #8a7a5f;
 }
 .hg-illstrip__row {
+  --ill-scale: 1;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -411,7 +416,11 @@
 }
 .hg-illstrip__row img {
   width: auto;
+  flex: none;
 }
+.hg-illstrip__row img:nth-child(1) { height: calc(84px * var(--ill-scale)); }
+.hg-illstrip__row img:nth-child(2) { height: calc(106px * var(--ill-scale)); }
+.hg-illstrip__row img:nth-child(3) { height: calc(104px * var(--ill-scale)); }
 
 /* ============================================================
    ARTIFACT B/C — Browser mock
@@ -421,6 +430,7 @@
   border-radius: 12px;
   box-shadow: 0 12px 40px rgba(13, 59, 82, 0.14);
   overflow: hidden;
+  min-width: 0;
 }
 .hg-browser--deep {
   box-shadow: 0 12px 40px rgba(13, 59, 82, 0.16);
@@ -539,12 +549,20 @@
   gap: 10px;
 }
 .hg-store__well {
-  height: 92px;
+  --ill-scale: 1;
+  height: calc(92px * var(--ill-scale));
   display: flex;
   align-items: flex-end;
 }
 .hg-store__well img {
   width: auto;
+  flex: none;
+}
+.hg-store__product:nth-child(1) .hg-store__well img { height: calc(74px * var(--ill-scale)); }
+.hg-store__product:nth-child(2) .hg-store__well img { height: calc(92px * var(--ill-scale)); }
+.hg-store__product:nth-child(3) .hg-store__well img { height: calc(90px * var(--ill-scale)); }
+.hg-store__product-text {
+  display: contents;
 }
 .hg-store__product-title {
   font-family: var(--hg-font-heading);
@@ -634,12 +652,13 @@
    ============================================================ */
 .hg-emails {
   display: flex;
+  flex-wrap: wrap;
   gap: 22px;
   align-items: flex-start;
-  margin: 16px 0 8px;
 }
 .hg-email {
-  flex: 1;
+  flex: 1 1 260px;
+  min-width: 0;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(13, 59, 82, 0.14);
@@ -728,7 +747,10 @@
 }
 .hg-email__strip img {
   width: auto;
+  flex: none;
 }
+.hg-email__strip img:nth-child(1) { height: 66px; }
+.hg-email__strip img:nth-child(2) { height: 54px; }
 
 /* ============================================================
    ARTIFACT E — Insert cards
@@ -738,53 +760,61 @@
   flex-direction: column;
   gap: 34px;
   margin: 24px 0 8px;
+  min-width: 0;
+  container-type: inline-size;
 }
+/* Books (portrait) and coffee (landscape) share a row at the handoff's
+   286 : 468 proportion; the grid keeps that ratio as the column narrows. */
 .hg-cardrow {
-  display: flex;
+  display: grid;
+  grid-template-columns: 286fr 468fr;
   gap: 22px;
-  align-items: flex-start;
+  align-items: start;
 }
 .hg-cardfig {
   display: flex;
   flex-direction: column;
   gap: 11px;
+  min-width: 0;
 }
+/* Each clip is the card's aspect ratio at the clip's own width. The card
+   inside is laid out at its design size and scaled to fit by --fit, which
+   useFitScale keeps equal to clipWidth / designWidth. */
 .hg-cardclip {
+  width: 100%;
   overflow: hidden;
   box-shadow: var(--hg-shadow-md);
 }
 .hg-cardclip--welcome {
-  width: 780px;
-  height: 530px;
+  --fit: 1.3;
+  aspect-ratio: 600 / 408;
 }
 .hg-cardclip--books {
-  width: 286px;
-  height: 420px;
+  --fit: 0.7;
+  aspect-ratio: 408 / 600;
 }
 .hg-cardclip--coffee {
-  width: 468px;
-  height: 318px;
+  --fit: 0.78;
+  aspect-ratio: 600 / 408;
 }
 .hg-card {
-  transform-origin: top left;
   position: relative;
+  transform-origin: top left;
+  transform: scale(var(--fit));
 }
 .hg-card--welcome {
   width: 600px;
   height: 408px;
-  transform: scale(1.3);
   background: #b58769;
 }
 .hg-card--books {
   width: 408px;
   height: 600px;
-  transform: scale(0.7);
   background: var(--hg-cream);
 }
 .hg-card--coffee {
   width: 600px;
   height: 408px;
-  transform: scale(0.78);
   background: var(--hg-cream);
 }
 
@@ -972,9 +1002,11 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-width: 0;
+  container-type: inline-size;
 }
 .hg-outcome__logo {
-  width: 300px;
+  width: min(300px, 100%);
   height: auto;
 }
 .hg-outcome__rule {
@@ -985,9 +1017,11 @@
 }
 .hg-outcome__circles {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
 }
 .hg-outcome__circle {
+  flex: none;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -995,9 +1029,10 @@
 }
 .hg-outcome__bottom {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 32px;
+  gap: 24px 32px;
 }
 .hg-outcome__caption {
   font-size: 11px;
@@ -1008,78 +1043,287 @@
   color: rgba(218, 234, 245, 0.6);
 }
 .hg-outcome__ills {
+  --ill-scale: 1;
   display: flex;
   align-items: flex-end;
   gap: 24px;
 }
 .hg-outcome__ills img {
   width: auto;
+  flex: none;
 }
+.hg-outcome__ills img:nth-child(1) { height: calc(60px * var(--ill-scale)); }
+.hg-outcome__ills img:nth-child(2) { height: calc(76px * var(--ill-scale)); }
+.hg-outcome__ills img:nth-child(3) { height: calc(74px * var(--ill-scale)); }
 
 /* ============================================================
-   Responsive — the shell shrinks with padding; fixed-size
-   mocks scroll horizontally rather than breaking the layout.
+   Responsive
+   The editorial shell responds to the viewport; each artifact
+   responds to its own width via container queries, so the mocks
+   reflow like real UI instead of being zoomed down. The print
+   cards scale proportionally (see .hg-cardclip).
    ============================================================ */
 @media (max-width: 860px) {
   .hg-cs__shell {
     padding-left: 24px;
     padding-right: 24px;
   }
-  .hg-brandcard__grid {
-    grid-template-columns: 1fr;
-  }
 }
 
-/* The fixed-size UI mocks scale down proportionally rather than
-   breaking the column; a scroll container is the fallback below
-   the smallest step. */
-.hg-cs__scroll {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-
-@media (max-width: 720px) {
-  .hg-cs__figure,
-  .hg-cs__scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+@media (max-width: 600px) {
+  .hg-cs__shell {
+    padding-top: 104px;
   }
-  .hg-browser,
-  .hg-emails {
-    zoom: 0.7;
+  .hg-cs__masthead {
+    width: 160px;
+    margin-bottom: 32px;
   }
-  .hg-cardrow {
-    flex-wrap: wrap;
+  .hg-cs__meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 20px;
+    margin-bottom: 44px;
   }
-  .hg-cardclip--welcome {
-    zoom: 0.6;
+  .hg-cs__lede {
+    gap: 24px;
+    padding: 48px 0 64px;
   }
-  .hg-cardclip--books,
-  .hg-cardclip--coffee {
-    zoom: 0.68;
+  .hg-cs__section {
+    padding-bottom: 64px;
+  }
+  .hg-cs__section--last {
+    padding-bottom: 48px;
+  }
+  .hg-cs__back {
+    padding: 28px 0 64px;
   }
 }
 
 @media (max-width: 480px) {
   .hg-cs__shell {
-    padding: 104px 20px 0;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .hg-cs__lede-lead {
-    font-size: 22px;
+}
+
+/* ---- Brand-system card ---- */
+@container (max-width: 640px) {
+  .hg-brandcard__grid {
+    grid-template-columns: 1fr;
   }
-  .hg-cs__heading {
-    font-size: 23px;
+}
+@container (max-width: 520px) {
+  .hg-brandcard {
+    padding: 24px 20px 20px;
+    gap: 16px;
   }
-  .hg-browser,
-  .hg-emails {
-    zoom: 0.52;
+  .hg-brandcard__tick {
+    top: 12px;
+    width: 20px;
+    height: 20px;
   }
-  .hg-cardclip--welcome {
-    zoom: 0.44;
+  .hg-brandcard__tick--l {
+    left: 12px;
   }
-  .hg-cardclip--books,
-  .hg-cardclip--coffee {
-    zoom: 0.5;
+  .hg-brandcard__tick--r {
+    right: 12px;
+  }
+  .hg-brandcard__labels {
+    padding: 6px 4px 0;
+  }
+  .hg-brandcard__label--r {
+    flex: none;
+    white-space: nowrap;
+  }
+  .hg-brandcard__logo {
+    padding: 26px 20px;
+  }
+  .hg-typecard {
+    padding: 22px;
+  }
+  .hg-typecard__display {
+    font-size: 26px;
+  }
+  .hg-palettecard {
+    padding: 20px;
+  }
+  .hg-illstrip {
+    padding: 18px 18px 24px;
+    gap: 16px;
+  }
+  .hg-illstrip__row {
+    --ill-scale: 0.78;
+    gap: 22px;
+  }
+}
+@container (max-width: 340px) {
+  .hg-illstrip__head {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .hg-illstrip__label {
+    max-width: none;
+  }
+  .hg-illstrip__row {
+    --ill-scale: 0.66;
+    gap: 16px;
+  }
+}
+
+/* ---- Browser mocks (storefront, capture page) ---- */
+@container (max-width: 560px) {
+  .hg-browser__chrome {
+    padding: 11px 14px;
+  }
+  .hg-browser__url {
+    padding: 4px 14px;
+    font-size: 10px;
+  }
+  .hg-browser__chrome-pad {
+    display: none;
+  }
+
+  /* Storefront */
+  .hg-store__nav {
+    padding: 13px 18px;
+    gap: 14px;
+  }
+  .hg-store__nav img {
+    height: 19px;
+    min-width: 0;
+  }
+  .hg-store__navlinks {
+    flex: none;
+    gap: 14px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .hg-store__hero {
+    padding: 32px 22px 34px;
+    gap: 12px;
+  }
+  .hg-store__hero-title {
+    font-size: 27px;
+  }
+  .hg-store__hero-body {
+    font-size: 12.5px;
+  }
+  .hg-btn-gold {
+    padding: 11px 18px;
+    font-size: 11.5px;
+  }
+  .hg-store__products {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px;
+  }
+  .hg-store__product {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+  }
+  .hg-store__well {
+    --ill-scale: 0.62;
+    flex: none;
+    width: 56px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .hg-store__product-title {
+    font-size: 15px;
+    text-align: left;
+  }
+  .hg-store__product-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  /* Capture page */
+  .hg-capture {
+    padding: 44px 22px 40px;
+    gap: 16px;
+  }
+  .hg-capture__logo {
+    width: 160px;
+  }
+  .hg-capture__title {
+    font-size: 28px;
+  }
+  .hg-capture__sub {
+    font-size: 13px;
+  }
+  .hg-capture__form {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+  .hg-capture__input {
+    width: 100%;
+  }
+  .hg-capture__form .hg-btn-gold {
+    text-align: center;
+  }
+}
+@container (max-width: 400px) {
+  /* Keep the storefront nav to what fits: the logo, one link, and the cart */
+  .hg-store__navlinks span:nth-child(2),
+  .hg-store__navlinks span:nth-child(3) {
+    display: none;
+  }
+  .hg-store__hero-title {
+    font-size: 24px;
+  }
+}
+
+/* ---- Emails ---- */
+@container (max-width: 560px) {
+  .hg-email__body,
+  .hg-email__body--cream {
+    padding: 20px;
+  }
+  .hg-email__strip {
+    padding: 16px 20px 18px;
+  }
+}
+
+/* ---- Insert cards ---- */
+@container (max-width: 560px) {
+  .hg-cardrow {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  /* A portrait card at full column width would tower; hold it near print scale */
+  .hg-cardfig--books {
+    max-width: 286px;
+  }
+}
+
+/* ---- Outcome panel ---- */
+@container (max-width: 560px) {
+  .hg-outcome {
+    padding: 36px 26px;
+    gap: 24px;
+  }
+  .hg-outcome__logo {
+    width: min(240px, 100%);
+  }
+  .hg-outcome__circles {
+    gap: 10px;
+  }
+  .hg-outcome__circle {
+    width: 44px;
+    height: 44px;
+  }
+  .hg-outcome__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hg-outcome__ills {
+    --ill-scale: 0.85;
+    gap: 18px;
   }
 }
