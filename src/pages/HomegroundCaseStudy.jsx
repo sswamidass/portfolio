@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import CaseStudyNav from '../components/CaseStudyNav'
 import CaseStudyFooter from '../components/CaseStudyFooter'
 import { useTheme } from '../context/useTheme'
+import { useFitScale } from '../hooks/useFitScale'
 import { img } from '../utils/img'
 import { workItems } from '../data/work'
 import './HomegroundCaseStudy.css'
@@ -99,9 +100,9 @@ function BrandSystemCard() {
           <div className="hg-illstrip__note">rooted in the natural world</div>
         </div>
         <div className="hg-illstrip__row">
-          <img src={A.illBooks} alt="Stack of three children's books" style={{ height: 84 }} />
-          <img src={A.illNovel} alt="Hardcover novel" style={{ height: 106 }} />
-          <img src={A.illCoffee} alt="Bag of coffee" style={{ height: 104 }} />
+          <img src={A.illBooks} alt="Stack of three children's books" />
+          <img src={A.illNovel} alt="Hardcover novel" />
+          <img src={A.illCoffee} alt="Bag of coffee" />
         </div>
       </div>
     </div>
@@ -134,24 +135,30 @@ function StorefrontMock() {
       <div className="hg-store__products">
         <div className="hg-store__product">
           <div className="hg-store__well">
-            <img src={A.illBooks} alt="Stack of children's books" style={{ height: 74 }} />
+            <img src={A.illBooks} alt="Stack of children's books" />
           </div>
-          <div className="hg-store__product-title">For the Little Ones</div>
-          <div className="hg-store__product-sub">Board &amp; picture books</div>
+          <div className="hg-store__product-text">
+            <div className="hg-store__product-title">For the Little Ones</div>
+            <div className="hg-store__product-sub">Board &amp; picture books</div>
+          </div>
         </div>
         <div className="hg-store__product">
           <div className="hg-store__well">
-            <img src={A.illNovel} alt="Hardcover novel" style={{ height: 92 }} />
+            <img src={A.illNovel} alt="Hardcover novel" />
           </div>
-          <div className="hg-store__product-title">For You</div>
-          <div className="hg-store__product-sub">One adult read</div>
+          <div className="hg-store__product-text">
+            <div className="hg-store__product-title">For You</div>
+            <div className="hg-store__product-sub">One adult read</div>
+          </div>
         </div>
         <div className="hg-store__product">
           <div className="hg-store__well">
-            <img src={A.illCoffee} alt="Bag of coffee" style={{ height: 90 }} />
+            <img src={A.illCoffee} alt="Bag of coffee" />
           </div>
-          <div className="hg-store__product-title">To Savor</div>
-          <div className="hg-store__product-sub">Great Lakes roaster</div>
+          <div className="hg-store__product-text">
+            <div className="hg-store__product-title">To Savor</div>
+            <div className="hg-store__product-sub">Great Lakes roaster</div>
+          </div>
         </div>
       </div>
       <div className="hg-store__footer">
@@ -224,10 +231,20 @@ function EmailMocks() {
           </div>
         </div>
         <div className="hg-email__strip">
-          <img src={A.illCoffee} alt="Bag of coffee" style={{ height: 66 }} />
-          <img src={A.illBooks} alt="Stack of children's books" style={{ height: 54 }} />
+          <img src={A.illCoffee} alt="Bag of coffee" />
+          <img src={A.illBooks} alt="Stack of children's books" />
         </div>
       </div>
+    </div>
+  )
+}
+
+/* Clips a fixed-size print card and scales it to the clip's width. */
+function FitCard({ variant, designWidth, children }) {
+  const ref = useFitScale(designWidth)
+  return (
+    <div ref={ref} className={`hg-cardclip hg-cardclip--${variant}`}>
+      <div className={`hg-card hg-card--${variant}`}>{children}</div>
     </div>
   )
 }
@@ -236,103 +253,92 @@ function EmailMocks() {
 function InsertCards() {
   return (
     <div className="hg-cards">
-      <div className="hg-cardfig">
-        <div className="hg-cs__scroll">
-          <div className="hg-cardclip hg-cardclip--welcome">
-            <div className="hg-card hg-card--welcome">
-              <div className="hg-welcome__inset">
-                <div className="hg-welcome__hello-row">
-                  <h3 className="hg-welcome__hello">Hello,</h3>
-                  <div className="hg-welcome__hello-rule" />
-                </div>
-                <div className="hg-welcome__eyebrow">Welcome to Homeground</div>
-                <div className="hg-welcome__copy">
-                  <p>
-                    Finally, your box has made it home. This is your very first Homeground box, and
-                    it&rsquo;s also our very first. So many things make this moment special, but
-                    mostly it&rsquo;s this: the small, meaningful moments you&rsquo;re about to share
-                    together.
-                  </p>
-                  <p>
-                    Whether you chose whole roasted or ground coffee beans, we encourage you to
-                    expand your craft and tempt your taste buds to try something familiar, but also
-                    brand new. Utilize the brew card to make yourself your favorite at-home barista.
-                  </p>
-                  <p>
-                    Homeground was built to bring families together through meaningful experiences.
-                    So, what are you waiting for? Let&rsquo;s unwrap your box!
-                  </p>
-                </div>
-                <div className="hg-welcome__footer">
-                  <div className="hg-welcome__sign">Coming Home</div>
-                  <div className="hg-welcome__sign hg-welcome__sign--sm">
-                    we&rsquo;re so glad you&rsquo;re here! Sanjay &amp; Sara
-                  </div>
-                </div>
+      <div className="hg-cardfig hg-cardfig--welcome">
+        <FitCard variant="welcome" designWidth={600}>
+          <div className="hg-welcome__inset">
+            <div className="hg-welcome__hello-row">
+              <h3 className="hg-welcome__hello">Hello,</h3>
+              <div className="hg-welcome__hello-rule" />
+            </div>
+            <div className="hg-welcome__eyebrow">Welcome to Homeground</div>
+            <div className="hg-welcome__copy">
+              <p>
+                Finally, your box has made it home. This is your very first Homeground box, and
+                it&rsquo;s also our very first. So many things make this moment special, but mostly
+                it&rsquo;s this: the small, meaningful moments you&rsquo;re about to share together.
+              </p>
+              <p>
+                Whether you chose whole roasted or ground coffee beans, we encourage you to expand
+                your craft and tempt your taste buds to try something familiar, but also brand new.
+                Utilize the brew card to make yourself your favorite at-home barista.
+              </p>
+              <p>
+                Homeground was built to bring families together through meaningful experiences. So,
+                what are you waiting for? Let&rsquo;s unwrap your box!
+              </p>
+            </div>
+            <div className="hg-welcome__footer">
+              <div className="hg-welcome__sign">Coming Home</div>
+              <div className="hg-welcome__sign hg-welcome__sign--sm">
+                we&rsquo;re so glad you&rsquo;re here! Sanjay &amp; Sara
               </div>
             </div>
           </div>
-        </div>
+        </FitCard>
         <div className="hg-cs__caption">Welcome card · front · 6 × 4 in</div>
       </div>
 
-      <div className="hg-cs__scroll">
-        <div className="hg-cardrow">
-          <div className="hg-cardfig">
-            <div className="hg-cardclip hg-cardclip--books">
-              <div className="hg-card hg-card--books">
-                <img
-                  className="hg-photocard__img hg-photocard__img--books"
-                  src={A.cardBooks}
-                  alt="Three children's books photographed on tan paper"
-                />
-                <div className="hg-books__text">
-                  <div className="hg-cardkicker">The Books</div>
-                  <h3 className="hg-books__title">
-                    <em>Three</em> for the kids
-                  </h3>
-                  <div className="hg-books__list">
-                    <div className="hg-books__item">
-                      <span className="hg-books__item-name">Barn in Fall</span>
-                      <span className="hg-books__item-fmt">Board book · 0–3</span>
-                    </div>
-                    <div className="hg-books__item">
-                      <span className="hg-books__item-name">Lawrence in the Fall</span>
-                      <span className="hg-books__item-fmt">Picture book · 3–6</span>
-                    </div>
-                    <div className="hg-books__item">
-                      <span className="hg-books__item-name">Runaway Pumpkins</span>
-                      <span className="hg-books__item-fmt">Picture book · 4–8</span>
-                    </div>
-                  </div>
+      <div className="hg-cardrow">
+        <div className="hg-cardfig hg-cardfig--books">
+          <FitCard variant="books" designWidth={408}>
+            <img
+              className="hg-photocard__img hg-photocard__img--books"
+              src={A.cardBooks}
+              alt="Three children's books photographed on tan paper"
+            />
+            <div className="hg-books__text">
+              <div className="hg-cardkicker">The Books</div>
+              <h3 className="hg-books__title">
+                <em>Three</em> for the kids
+              </h3>
+              <div className="hg-books__list">
+                <div className="hg-books__item">
+                  <span className="hg-books__item-name">Barn in Fall</span>
+                  <span className="hg-books__item-fmt">Board book · 0–3</span>
+                </div>
+                <div className="hg-books__item">
+                  <span className="hg-books__item-name">Lawrence in the Fall</span>
+                  <span className="hg-books__item-fmt">Picture book · 3–6</span>
+                </div>
+                <div className="hg-books__item">
+                  <span className="hg-books__item-name">Runaway Pumpkins</span>
+                  <span className="hg-books__item-fmt">Picture book · 4–8</span>
                 </div>
               </div>
             </div>
-            <div className="hg-cs__caption">Books card · front · 4 × 6 in</div>
-          </div>
+          </FitCard>
+          <div className="hg-cs__caption">Books card · front · 4 × 6 in</div>
+        </div>
 
-          <div className="hg-cardfig">
-            <div className="hg-cardclip hg-cardclip--coffee">
-              <div className="hg-card hg-card--coffee">
-                <img
-                  className="hg-photocard__img hg-photocard__img--coffee"
-                  src={A.cardCoffee}
-                  alt="Infusco coffee bag photographed on tan paper"
-                />
-                <div className="hg-coffee__text">
-                  <div className="hg-cardkicker">The Coffee</div>
-                  <h3 className="hg-coffee__name">Alejandro Reynoso</h3>
-                  <div className="hg-coffee__farm">Finca La Colina</div>
-                  <div className="hg-coffee__roaster">
-                    Infusco Coffee Roasters
-                    <br />
-                    Sawyer, Michigan
-                  </div>
-                </div>
+        <div className="hg-cardfig hg-cardfig--coffee">
+          <FitCard variant="coffee" designWidth={600}>
+            <img
+              className="hg-photocard__img hg-photocard__img--coffee"
+              src={A.cardCoffee}
+              alt="Infusco coffee bag photographed on tan paper"
+            />
+            <div className="hg-coffee__text">
+              <div className="hg-cardkicker">The Coffee</div>
+              <h3 className="hg-coffee__name">Alejandro Reynoso</h3>
+              <div className="hg-coffee__farm">Finca La Colina</div>
+              <div className="hg-coffee__roaster">
+                Infusco Coffee Roasters
+                <br />
+                Sawyer, Michigan
               </div>
             </div>
-            <div className="hg-cs__caption">Coffee card · front · 6 × 4 in</div>
-          </div>
+          </FitCard>
+          <div className="hg-cs__caption">Coffee card · front · 6 × 4 in</div>
         </div>
       </div>
     </div>
@@ -365,9 +371,9 @@ function OutcomePanel() {
           email, print &amp; packaging
         </div>
         <div className="hg-outcome__ills">
-          <img src={A.illBooks} alt="Stack of children's books" style={{ height: 60 }} />
-          <img src={A.illNovel} alt="Hardcover novel" style={{ height: 76 }} />
-          <img src={A.illCoffee} alt="Bag of coffee" style={{ height: 74 }} />
+          <img src={A.illBooks} alt="Stack of children's books" />
+          <img src={A.illNovel} alt="Hardcover novel" />
+          <img src={A.illCoffee} alt="Bag of coffee" />
         </div>
       </div>
     </div>
@@ -517,10 +523,10 @@ export default function HomegroundCaseStudy() {
             deliverability from day one. Every campaign followed the same visual system as the
             storefront: consistent type, consistent color, consistent voice.
           </p>
-          <div className="hg-cs__scroll">
+          <div className="hg-cs__figure">
             <EmailMocks />
+            <div className="hg-cs__caption">Welcome flow · confirmation and nurture</div>
           </div>
-          <div className="hg-cs__caption">Welcome flow · confirmation and nurture</div>
         </section>
 
         <section className="hg-cs__section">
